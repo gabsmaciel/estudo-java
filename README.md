@@ -43,3 +43,24 @@ operadores relacionais -> booleanos, dados como verdadeiro (true) ou falso (fals
 operadores ternários -> são operadores condicionais que permitem fazer condições em uma única linha de código.
 geralmente é usado a (?) para separar expressão verdadeiro ou falso. 
 pode ser usado (:) para separar o valor atribuido quando de uma expressão verdadeira ou falsa. 
+
+
+_Classes e Métodos_
+- revisão sobre classe -> até a fase de controle foi apenas criado o main, mas agora terá divisões. 
+uma classe DEFINE um bloco de código. 
+temos public class (nome da Classe) {
+bloco de código
+}
+
+- Anatomia de uma classe -> class (nome reservado) por pratica começa com letra maiúscula, geralmente antes da CLASS vem o modificador. 
+
+modificadores - class Nome ... {
+//corpo 
+atributos e comportamentos(termos de ação). 
+}
+
+- atributos -> dados, exemplo: do tipo int, boolean, Date, String (primitivos ou não).
+- comportamentos -> métodos, exemplo: são os comportamentos, uso de estruturas de controle ou não.  
+atributos e comportamentos são MEMBROS da classe que são dados que tem estruturas de dados de como uma forma será comportada e os métodos que é nossos algoritmos. 
+
+- A ideia da classe é justamente a junção de ambos. (atributos e métodos)
