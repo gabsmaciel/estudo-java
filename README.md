@@ -64,3 +64,18 @@ atributos e comportamentos(termos de ação).
 atributos e comportamentos são MEMBROS da classe que são dados que tem estruturas de dados de como uma forma será comportada e os métodos que é nossos algoritmos. 
 
 - A ideia da classe é justamente a junção de ambos. (atributos e métodos)
+
+Uma classe define um tipo personalizado ou uma estrutura de dados. A classe representa uma abstração (uma simplificação), uma modelação do mundo real para desenvolvimento de um software. 
+A partir de uma classe (estrutura de dados) criamos objetos que representa os dados.  
+Objeto == Instância (são sinônimos). 
+
+_Relação entre Classe e Objeto_
+
+Classe (Molde) - > pode criar outras que são denominados de instâncias, ou seja, o molde da classe pode ser aplicado para outras instâncias (objetos), os valores podem mudar mas a estrutura em si continua a mesma. Exemplo: uma calça, temos o molde e podemos criar varios tipos de calças seja de seda, algodão etc. 
+
+Em contexto de Programação, temos um Produto (classe) que possui 3 atributos (nome, preço, desconto - tipos) mas temos OBJETOS (instâncias) desse produto que o eventualmente terá nome, preço e desconto. 
+
+O construtor é um metodo especial, responsável a partir de uma classe cria um objeto. 
+
+- Membros de uma classe -> atributos, métodos e construtores. 
+- Acessar os membros -> notação ponto (.) objeto.membro - a partir de um objeto consegue acessar os membros dele, eventualmente de uma classe também. 
