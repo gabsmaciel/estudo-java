@@ -79,3 +79,26 @@ O construtor é um metodo especial, responsável a partir de uma classe cria um 
 
 - Membros de uma classe -> atributos, métodos e construtores. 
 - Acessar os membros -> notação ponto (.) objeto.membro - a partir de um objeto consegue acessar os membros dele, eventualmente de uma classe também. 
+
+_Método e Construtor_
+
+Anatomia do Método -> após o algoritmo receber sequência de passos, eventualmente essa sequência irá receber parametros de entrada e eventualmente de saída também, mas também pode receber e não retornar nada, não necessariamente receber nada ou sair. 
+
+nomeMetodo(PARAMETRO) { algoritmo
+}
+ - O método poderia retornar uma string, int ou pode não retornar nada que seria o VOID (ausência de retorno). 
+
+Exemplificação de um método que soma. 
+
+int Somar(nome do Metodo) ( int a, int b){
+//uma função que recebe dois parametros de entrada e retorna UM valor.
+para retornar deve ser usado RETURN. 
+Implementação -> return a+b; 
+}
+Dentro de uma classe não pode ter dois métodos com mesmo nome e mesmo tipo.
+
+Construtores -> geralmente nome da classe e nome do construtor possui mesmo nome. O construtor padrão é aquele que não recebe nenhum parametro. 
+Exemplo: Produto p1 = new Produto();   - trata-se de um construtor padrão a segunda parte. 
+Para distinguir um método de construtor é o retorno, construtor NÃO tem retorno. 
+- java/classe desafioData exemplifica 3 tipos de uso do construtor.  
+
