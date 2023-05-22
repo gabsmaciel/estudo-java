@@ -3,8 +3,8 @@ package classe;
 public class ProdutoTeste {
     public static void main(String[] args) {
         //criacao de objeto de forma consciente.
-        Produto p1 = new Produto();
-        p1.nome = "Notebook";
+        Produto p1 = new Produto("Notebook");
+        //p1.nome = "Notebook";
         p1.preco = 4356.89;
         p1.desconto = 0.25;
 
@@ -15,9 +15,7 @@ public class ProdutoTeste {
         p2.desconto = 0.29;
 
         System.out.println(p1.nome);
-        System.out.println(p2.nome);
-
-        double precoFinal = p1.preco * (1- p1.desconto);
+        double precoFinal = p1.precoComDesconto();
         System.out.println(precoFinal);
 
         //no presente código apresentamos formas de instancias através da classe Produto.
