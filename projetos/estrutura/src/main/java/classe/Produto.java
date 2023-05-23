@@ -3,7 +3,7 @@ package classe;
 public class Produto {
     String nome;
     double preco;
-    double desconto;
+    static double desconto = 0.25;
 
     Produto(String nomeInicial) {
         nome = nomeInicial;
@@ -16,4 +16,5 @@ public class Produto {
     public double precoComDesconto() {
         return preco * (1- desconto);
     }
+
 }
