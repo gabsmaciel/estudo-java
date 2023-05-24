@@ -102,3 +102,32 @@ Exemplo: Produto p1 = new Produto();   - trata-se de um construtor padrão a seg
 Para distinguir um método de construtor é o retorno, construtor NÃO tem retorno. 
 - java/classe desafioData exemplifica 3 tipos de uso do construtor.  
 
+_Classe e Instância_
+
+Com uso da palavra new (palavra reservada), uma nova instância é criada. A instância terá espaços de memórias. 
+Qual a diferença de ter um atributo de classe? Com uso de static, o atributo pertence a classe e será associado ao mesmo. 
+
+Exemplificando: tenho uma Classe Data, essa classe possui dia, mês e ano. Se instancio, posso armazenar na memória determinado valor.
+Mas se acontecer de na Classe Data, mas se eu tornar STATIC o dia por exemplo o valor atribuido pertence a classe e não a cada uma das instâncias. 
+Se a Classe tiver o dia 3 e ele é static, todas as outras instâncias também terá por dia o 3 e não o valor armazenado na memória instanciada.
+
+_Atribuição por Valor e Atribuição por Referência_
+
+Atribuição por Valor -> Primitivos
+Atribuição por Referência -> Objetos 
+
+_*Valores Padrão*_
+
+- na criaçao de byte, short, int, long = 0 
+-float, double = 0
+-boolean -> false
+- chart -> \u000'
+Objetos tem por padrão -> null - a variavel não aponta para nenhum endereço de memória. 
+
+_*Arrays*_
+
+-É estático, tamanho fixo. No momento da criação deve terminar o tamanho do Array. 
+- Homogêneo, significa que o tipo não pode ser mudado.(os dados contidos nele não pode ser mudado)
+- Array é um objeto (possui atributos).
+- Array dentro de um Array é uma Matriz. 
+
