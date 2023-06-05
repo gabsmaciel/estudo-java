@@ -131,3 +131,54 @@ _*Arrays*_
 - Array é um objeto (possui atributos).
 - Array dentro de um Array é uma Matriz. 
 
+_*Equals*_
+
+-É um metodo que está disponivel em todos os metodos em Java. Todo objeto que seja do proprio Java recebe o metodo equals. 
+
+-Retorna boolean. (true/false)
+
+_*HashCode*_
+
+-É mais rápido, comparando inteiros. 
+-É uma função que retorna inteiro.
+
+- Resumindo, o método equals() é usado para comparar o valor dos objetos, enquanto o método hashCode() é usado para obter um código hash que representa a identidade do objeto para fins de organização em estruturas de dados.
+
+_*Collections*_
+
+Collection -> É a interface raiz da hierarquia de coleções. Ela define os métodos básicos que todas as coleções devem ter, como add(), remove(), contains() e size().
+
+- *Set*
+
+Não ordernado (por padrão), não indexado(não tem como acessar através do indice), não aceita repetição. 
+
+Set-> É uma interface que estende a interface Collection e representa uma coleção de elementos únicos, ou seja, não permite elementos duplicados. Exemplos de implementações de Set incluem HashSet e TreeSet.
+TreeSet -> ordem que foi inserido.
+SortSet -> lista de conjunto ordernados. 
+
+- *List*
+
+É parecido com Array, acessa através do indice. 
+Indexado e aceita repetição. (de dados)
+
+List -> É uma interface que estende a interface Collection e representa uma sequência ordenada de elementos, onde os elementos podem ser acessados por meio de índices. Alguns exemplos de implementações de List são ArrayList e LinkedList.
+
+- *Map*
+
+Chave/Valor.
+Chave não aceita repetição. 
+Valor não aceita repetição. 
+Map -> É uma interface que mapeia chaves a valores. Cada chave é única e é associada a um valor correspondente. Exemplos de implementações de Map são HashMap, TreeMap e LinkedHashMap.
+
+- *Queue* (Fila)
+
+Implementa fila.
+Primeiro que entra e primeiro que sai. 
+Offer retorna true ou false. 
+Offer e Add -> adicionam elementos na fila, a diferença é o comportamento quando a fila está cheia. 
+Peek e Element -> obtem o próximo elemento da fila (sem remover), peek retorna false e element lança uma exceção. 
+
+- *Stack* (Pilha)
+
+Implementa Pilha (stack)
+Primeiro que entra, é o ultimo que sai. 
