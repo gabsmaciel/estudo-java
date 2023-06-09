@@ -182,3 +182,16 @@ Peek e Element -> obtem o próximo elemento da fila (sem remover), peek retorna 
 
 Implementa Pilha (stack)
 Primeiro que entra, é o ultimo que sai. 
+
+_Orientação a Objeto_
+
+- *Reuso via composição*
+
+-um objeto é composto por outro objeto que se relacionam entre si. 
+
+*relação um para um. carro -> motor
+
+*relação um para n. compra -> itens (varios itens)
+
+*relação n para n. tios -> sobrinhos
+
