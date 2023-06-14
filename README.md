@@ -1,8 +1,8 @@
-# estudo-java
+# estudos-java
 
-**Revisão dos estudos em Java**
+**Revisão dos estudos em Java com Professor Leonardo no site da Udemy.**
 
-_Fundamentos_
+### Fundamentos
 
 - uso de variavel -> tem por tipo, um nome ou valor inicial que pode ser alterado ao longo do tempo, ou seja, é comum que seja usado em várias partes do código. 
 - uso de constante -> é uma variavel cujo valor não pode ser alterado, para isso é definido a palavra "final".
@@ -45,7 +45,8 @@ geralmente é usado a (?) para separar expressão verdadeiro ou falso.
 pode ser usado (:) para separar o valor atribuido quando de uma expressão verdadeira ou falsa. 
 
 
-_Classes e Métodos_
+### Classes e Métodos
+
 - revisão sobre classe -> até a fase de controle foi apenas criado o main, mas agora terá divisões. 
 uma classe DEFINE um bloco de código. 
 temos public class (nome da Classe) {
@@ -102,7 +103,7 @@ Exemplo: Produto p1 = new Produto();   - trata-se de um construtor padrão a seg
 Para distinguir um método de construtor é o retorno, construtor NÃO tem retorno. 
 - java/classe desafioData exemplifica 3 tipos de uso do construtor.  
 
-_Classe e Instância_
+### Classe e Instância
 
 Com uso da palavra new (palavra reservada), uma nova instância é criada. A instância terá espaços de memórias. 
 Qual a diferença de ter um atributo de classe? Com uso de static, o atributo pertence a classe e será associado ao mesmo. 
@@ -183,15 +184,27 @@ Peek e Element -> obtem o próximo elemento da fila (sem remover), peek retorna 
 Implementa Pilha (stack)
 Primeiro que entra, é o ultimo que sai. 
 
-_Orientação a Objeto_
+### Orientação a Objeto
 
-- *Reuso via composição*
+- Reuso via composição
 
--um objeto é composto por outro objeto que se relacionam entre si. 
+- Um objeto é composto por outro objeto que se relacionam entre si.
 
-*relação um para um. carro -> motor
+- Relação um para um: carro -> motor.
 
-*relação um para n. compra -> itens (varios itens)
+- Relação um para n: compra -> itens (vários itens).
 
-*relação n para n. tios -> sobrinhos
+- Relação n para n: tios -> sobrinhos.
 
+- #### *Encapsulamento* - um objeto (classe do objeto) precisa estar escondido do mundo exterior. Não é necessário conhecer a fundo o objeto. O que precisa ou não de visibilidade.
+
+* Modificadores de acesso: public, protected, private.
+
+Private: ele só pode ser acessado dentro da própria classe (restrito).
+Public: pode ser acessado por todos.
+Protected: atributo ou método que pode ser acessado através do mesmo pacote.
+- #### *Herança* - também é um reuso de código. A herança é uma relação "é-um", em que a subclasse é um tipo mais específico da superclasse. Isso significa que a subclasse herda os membros (atributos e métodos) da superclasse e também pode adicionar novos membros ou modificar os existentes. Dessa forma, a herança promove a reutilização de código, pois as classes derivadas não precisam reescrever ou reimplementar os membros herdados.
+
+- Superclasse: é mais genérica.
+- Subclasse: é mais específica.
+- A herança utiliza a palavra-chave extends.
