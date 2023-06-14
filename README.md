@@ -208,3 +208,16 @@ Protected: atributo ou método que pode ser acessado através do mesmo pacote.
 - Superclasse: é mais genérica.
 - Subclasse: é mais específica.
 - A herança utiliza a palavra-chave extends.
+
+#### *Polimorfismo* -permite tratar objetos de diferentes classes de forma uniforme, desde que compartilhem uma relação de herança ou implementem uma interface em comum. Existem dois tipos principais de polimorfismo: sobrescrita e sobrecarga.
+
+- exemplo: Carro (super classe) -> Civic e Ferrari (classes). 
+
+Civic c = new Civic(); //pode acontecer das duas formas. Do tipo mais espeficio para tipo mais generico.
+Carro c = new Civic (); 
+
+- Na criação de metódo, por exemplo estacionar (Civic c) {..}
+metodo especifico. Mas pode ser usado como um modelo mais generico, por exemplo no lugar de Civic, passar Carro que é mais generico. 
+
+
+#### *Abstração* - simplificação, algo dentro do mundo real e colocar dentro do software que permite modelar objetos do mundo real em termos de suas características essenciais e comportamentos relevantes, sem se preocupar com os detalhes internos de implementação
