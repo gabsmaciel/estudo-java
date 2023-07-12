@@ -21,10 +21,16 @@ public class CarroTeste {
 
         c2.acelerar();
         c2.frear();
+        c2.ligarTurbo();
 
         System.out.println(c2);
-
         c2.acelerar();
+
+        System.out.println(c2);
+        c2.desligarTurbo();
+        c2.acelerar();
+        c2.ligarAr();
+
         System.out.println(c2);
 
     }
