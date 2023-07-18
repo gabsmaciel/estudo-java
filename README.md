@@ -216,8 +216,44 @@ Protected: atributo ou método que pode ser acessado através do mesmo pacote.
 Civic c = new Civic(); //pode acontecer das duas formas. Do tipo mais espeficio para tipo mais generico.
 Carro c = new Civic (); 
 
+Para chamar um construtor na herança da classe pai, usa-se o super() diferentemente do this(). 
+
+
+getters e setters -> quando se cria atributos dentro de uma classe via de regra colocamos atributos como privatos e usamos getters e setters. 
+
+#### *Interface* - uma interface em Java é uma especificação de um conjunto de métodos e constantes que outras classes podem implementar. Uso da palavra implements na classe. 
+
+- Classe concreta -> todos os metodos estão definidos ou implementados. (todos possui corpo) geralmente por uso de chaves dentro a implementação. 
+
+A interface por outro lado os metodos não tem corpo. 
+
+- Classe abstrata -> pode ter metodos abstratos ou pode ser completamente concreta, todos os metodos definidos. A classe abstrata não pode ser instanciada. 
+O uso da palavra abstract impede um novo instanciamento. 
+
+
 - Na criação de metódo, por exemplo estacionar (Civic c) {..}
 metodo especifico. Mas pode ser usado como um modelo mais generico, por exemplo no lugar de Civic, passar Carro que é mais generico. 
 
 
-#### *Abstração* - simplificação, algo dentro do mundo real e colocar dentro do software que permite modelar objetos do mundo real em termos de suas características essenciais e comportamentos relevantes, sem se preocupar com os detalhes internos de implementação
+#### *Abstração* - simplificação, algo dentro do mundo real e colocar dentro do software que permite modelar objetos do mundo real em termos de suas características essenciais e comportamentos relevantes, sem se preocupar com os detalhes internos de implementação.
+
+### Stream API
+
+Dentro da streams existe várias sequências de metodos, operadores..
+
+- Built Op (Construção) -> criar streams, pode ser criada de formas diferentes com metodos estaticos, pode ser através de uma lista. É chamada a operação de construção. 
+
+- Intermediario Ops -> Transforma os dados passando por várias funções, uma função pequena que tenha poucas responsabilidades e vai encadeando informações. Facilmente encadeadas uma atras da outra. As intermediarias sempre retorna uma nova stream. 
+
+- Terminal Ops (Terminais) -> Entre as operações intermediarias, a operação final é a ponta do processo. (final) 
+
+O Built inicio do processo, intermediario são as operações que podem ser encadeadas em quantos passos precisar para implementar algoritmo. (inicio, meio e fim).
+
+
+- Streams Ordernadas -> uma sequência a ser seguida. 
+
+- Não ordernadas -> não tem necessariamente uma ordernação. 
+
+- Streams Sequencial -> Sempre um dado por vez, processa um produto, depois processa outro produto. 
+
+- Stream Paralela -> são criadas varias linhas de execução para ir processando os dados de forma paralela, indepedente de como será implementado. 
