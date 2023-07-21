@@ -10,10 +10,10 @@ public class DesafioFilter {
 
     public static void main(String[] args) {
 
-        Produto p1 = new Produto("Notebook", 2500, 0.2);
-        Produto p2 = new Produto("Teclado", 200, 0.2);
-        Produto p3 = new Produto("Mouse", 40, 0.1);
-        Produto p4 = new Produto("Impressora", 1200, 0.1);
+        Produto p1 = new Produto("Notebook", 2500, 0.2,true);
+        Produto p2 = new Produto("Teclado", 200, 0.2, true);
+        Produto p3 = new Produto("Mouse", 40, 0.1, true);
+        Produto p4 = new Produto("Impressora", 1200, 0.1, false);
 
 
         List<Produto> produtos = Arrays.asList(p1, p2, p3, p4);
