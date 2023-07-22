@@ -17,6 +17,6 @@ public class Reduce1 {
 
         Integer total2 = numeros.parallelStream().reduce(0, soma);
         System.out.println(total2);
-        
+
     }
 }
