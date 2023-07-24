@@ -1,4 +1,4 @@
-package streams.desafios;
+package streams;
 
 import streams.Aluno;
 
