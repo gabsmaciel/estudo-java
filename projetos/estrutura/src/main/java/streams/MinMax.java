@@ -26,7 +26,5 @@ public class MinMax {
 
         System.out.println(alunos.stream().min(melhorNota).get()); //MENOR NOTA USO DE MIN.
 
-
-
     }
 }

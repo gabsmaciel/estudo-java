@@ -34,5 +34,4 @@ public class Reduce3 {
 
         System.out.println("A media da turma com apenas aprovados é:" + media.getValor());
     }
-
 }
