@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Aluno {
 
-    final String nome;
+    public final String nome;
     List<Curso> cursos = new ArrayList<>();
 
     public Aluno(String nome) {
