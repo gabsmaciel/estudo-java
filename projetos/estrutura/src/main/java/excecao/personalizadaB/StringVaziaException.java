@@ -1,4 +1,4 @@
-package excecao;
+package excecao.personalizadaB;
 
 public class StringVaziaException extends Throwable {
     private final String nomeDoAtributo;
@@ -8,7 +8,7 @@ public class StringVaziaException extends Throwable {
     }
 
     public String getMessage() {
-        return String.format("O atributo $s está vazio", nomeDoAtributo);
+        return String.format("O atributo %s está vazio", nomeDoAtributo);
     }
 }
 

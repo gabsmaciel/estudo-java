@@ -1,4 +1,6 @@
-package excecao;
+package excecao.personalizadaB;
+
+import excecao.Aluno;
 
 public class TesteValidacoes {
 
@@ -11,7 +13,6 @@ public class TesteValidacoes {
         } catch (StringVaziaException e) {
             throw new RuntimeException(e.getMessage());
         }
-
         System.out.println("Fim");
     }
 }

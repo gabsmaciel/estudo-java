@@ -1,4 +1,7 @@
-package excecao;
+package excecao.personalizadaB;
+
+import excecao.Aluno;
+import excecao.NumeroNegativoException;
 
 public class Validar {
 
