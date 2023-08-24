@@ -256,4 +256,74 @@ O Built inicio do processo, intermediario são as operações que podem ser enca
 
 - Streams Sequencial -> Sempre um dado por vez, processa um produto, depois processa outro produto. 
 
-- Stream Paralela -> são criadas varias linhas de execução para ir processando os dados de forma paralela, indepedente de como será implementado. 
+- Stream Paralela -> são criadas varias linhas de execução para ir processando os dados de forma paralela, indepedente de como será implementado.
+### Tratamento de Exceções em Java:
+O tratamento de exceções em Java é uma técnica usada para lidar com situações inesperadas ou erros que podem ocorrer durante a execução de um programa. Isso ajuda a tornar o código mais robusto e a fornecer informações úteis sobre o erro para que ele possa ser corrigido ou tratado adequadamente. O tratamento de exceções envolve os seguintes conceitos:
+
+Try-Catch Blocks: Um bloco try é usado para envolver o código que pode gerar uma exceção. Dentro do bloco try, você pode usar um ou mais blocos catch que capturam e tratam as exceções específicas que podem ocorrer.
+
+Exceções Verificadas (Checked Exceptions): São exceções que o compilador verifica se são tratadas ou declaradas no método. Para tratá-las, use blocos catch correspondentes ou declarações throws no cabeçalho do método.
+
+Exceções Não Verificadas (Unchecked Exceptions): Também conhecidas como exceções de tempo de execução, não precisam ser tratadas ou declaradas explicitamente. Elas ocorrem durante a execução e geralmente indicam erros no código.
+
+Bloco Finally: Pode ser usado após um bloco try-catch para conter código que sempre será executado, independentemente de ocorrer ou não uma exceção. É usado para liberar recursos ou realizar ações de limpeza.
+
+Declaração Throws: Pode ser usada para propagar a exceção para o chamador do método, em vez de tratá-la no próprio método.
+
+Cadeia de Exceções (Exception Chaining): Permite encapsular uma exceção original dentro de outra exceção. Isso pode ser útil para fornecer informações mais detalhadas sobre a causa do erro.
+
+Personalização de Exceções: Você também pode criar suas próprias classes de exceção personalizadas estendendo a classe Exception ou RuntimeException, de acordo com a natureza da exceção.
+
+Método getMessage(): Todas as exceções possuem um método getMessage() que retorna uma descrição do erro, que pode ser útil para registro ou depuração.
+
+### BANCO DE DADOS 
+
+Comandos SQL:
+
+*DML - Data Manipulation Language:*
+#### SELECT: Recupera dados de uma ou mais tabelas no banco de dados, permitindo que os usuários especifiquem as colunas, filtros e ordenações desejados.
+
+#### INSERT: Insere novos registros em uma tabela, adicionando dados às colunas especificadas.
+
+#### UPDATE: Modifica registros existentes em uma tabela, permitindo a atualização dos valores das colunas.
+
+#### DELETE: Remove registros de uma tabela com base em critérios específicos, eliminando os dados.
+
+*DDL - Data Definition Language:*
+
+#### CREATE: Cria um novo objeto de banco de dados, como uma tabela, índice, visão ou procedimento armazenado.
+
+#### ALTER: Modifica a estrutura de um objeto existente no banco de dados, como adicionar ou remover colunas de uma tabela.
+
+#### DROP: Exclui um objeto do banco de dados, como uma tabela, índice ou visão.
+
+*DCL - Data Control Language:*
+
+#### GRANT: Concede permissões específicas a usuários ou funções, permitindo que eles acessem e executem operações em objetos de banco de dados.
+
+#### DENY: Nega explicitamente permissões a usuários ou funções, restringindo o acesso a objetos de banco de dados.
+
+#### REVOKE: Remove as permissões anteriormente concedidas a usuários ou funções.
+
+*TCL - Transaction Control Language:*
+#### COMMIT: Confirma uma transação, tornando as alterações permanentes no banco de dados.
+
+#### ROLLBACK: Desfaz uma transação, revertendo todas as alterações realizadas na transação.
+
+#### SAVEPOINT: Cria um ponto de salvamento dentro de uma transação, permitindo a restauração para esse ponto específico em caso de necessidade.
+
+#### RELEASE: Libera um ponto de salvamento criado com o comando SAVEPOINT, permitindo que as alterações após esse ponto sejam confirmadas.
+
+
+
+#### Tipos de JOINS
+
+*Inner Join* -> pega os dados de uma chave primaria (primary key) e de uma chave estrangeira(foregein key).
+
+A consulta do tipo inner é apenas relacionado entre duas tabelas. Aquilo que está fora das duas tabeolas é Outer (tudo aquilo que está fora).
+
+*Left Join* -> é aquilo que é comum mas ao lado esquerdo da relação. Por exemplo da tabela A e B. Pega-se tudo da tabela A, que seria o lado esquerdo + inner (aquilo que está no meio). 
+
+*Right Join* -> é aquilo que é o comum mas ao lado direito da relação, é oposto de left.
+
+*Full Join* -> é possível simular fazendo o resultado de Left e Right Join com Inner. (não suportado por outros bancos mas suportado por outros bancos)
