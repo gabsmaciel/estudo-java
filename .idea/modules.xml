@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/estudo-java.iml" filepath="$PROJECT_DIR$/.idea/estudo-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projetos/campo-minado/campo-minado.iml" filepath="$PROJECT_DIR$/projetos/campo-minado/campo-minado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/estudos-java.iml" filepath="$PROJECT_DIR$/.idea/estudos-java.iml" />
     </modules>
   </component>
 </project>
