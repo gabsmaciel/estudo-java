@@ -57,8 +57,8 @@ class CampoTest {
 
     @Test
     void testeAlternarMarcacao() {
-        campo.alternarMarcado();
-        campo.alternarMarcado();
+        campo.alternarMarcacao();
+        campo.alternarMarcacao();
         assertFalse(campo.isMarcado());
     }
 
@@ -69,7 +69,7 @@ class CampoTest {
 
     @Test
     void testeAbrirMinadoMarcado() {
-        campo.alternarMarcado();
+        campo.alternarMarcacao();
         campo.minar();
         assertFalse(campo.abrir());
     }
@@ -94,4 +94,5 @@ class CampoTest {
 
         assertTrue(campo22.isAberto() && campo11.isAberto());
     }
+
 }
