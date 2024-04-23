@@ -7,6 +7,5 @@ public class Aplicacao {
 
         Tabuleiro tabuleiro = new Tabuleiro(6, 6, 6);
         new TabuleiroConsole(tabuleiro);
-
     }
 }
