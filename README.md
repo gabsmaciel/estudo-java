@@ -2,7 +2,7 @@
 
 **Revisão dos estudos em Java com Professor Leonardo no site da Udemy.**
 
-### Fundamentos
+## Fundamentos
 
 - uso de variavel -> tem por tipo, um nome ou valor inicial que pode ser alterado ao longo do tempo, ou seja, é comum que seja usado em várias partes do código. 
 - uso de constante -> é uma variavel cujo valor não pode ser alterado, para isso é definido a palavra "final".
@@ -45,7 +45,7 @@ geralmente é usado a (?) para separar expressão verdadeiro ou falso.
 pode ser usado (:) para separar o valor atribuido quando de uma expressão verdadeira ou falsa. 
 
 
-### Classes e Métodos
+## Classes e Métodos
 
 - revisão sobre classe -> até a fase de controle foi apenas criado o main, mas agora terá divisões. 
 uma classe DEFINE um bloco de código. 
@@ -184,7 +184,7 @@ Peek e Element -> obtem o próximo elemento da fila (sem remover), peek retorna 
 Implementa Pilha (stack)
 Primeiro que entra, é o ultimo que sai. 
 
-### Orientação a Objeto
+## Orientação a Objeto
 
 - Reuso via composição
 
@@ -196,14 +196,14 @@ Primeiro que entra, é o ultimo que sai.
 
 - Relação n para n: tios -> sobrinhos.
 
-- #### *Encapsulamento* - um objeto (classe do objeto) precisa estar escondido do mundo exterior. Não é necessário conhecer a fundo o objeto. O que precisa ou não de visibilidade.
+#### *Encapsulamento* - um objeto (classe do objeto) precisa estar escondido do mundo exterior. Não é necessário conhecer a fundo o objeto. O que precisa ou não de visibilidade.
 
 * Modificadores de acesso: public, protected, private.
 
 Private: ele só pode ser acessado dentro da própria classe (restrito).
 Public: pode ser acessado por todos.
 Protected: atributo ou método que pode ser acessado através do mesmo pacote.
-- #### *Herança* - também é um reuso de código. A herança é uma relação "é-um", em que a subclasse é um tipo mais específico da superclasse. Isso significa que a subclasse herda os membros (atributos e métodos) da superclasse e também pode adicionar novos membros ou modificar os existentes. Dessa forma, a herança promove a reutilização de código, pois as classes derivadas não precisam reescrever ou reimplementar os membros herdados.
+#### *Herança* - também é um reuso de código. A herança é uma relação "é-um", em que a subclasse é um tipo mais específico da superclasse. Isso significa que a subclasse herda os membros (atributos e métodos) da superclasse e também pode adicionar novos membros ou modificar os existentes. Dessa forma, a herança promove a reutilização de código, pois as classes derivadas não precisam reescrever ou reimplementar os membros herdados.
 
 - Superclasse: é mais genérica.
 - Subclasse: é mais específica.
@@ -237,7 +237,7 @@ metodo especifico. Mas pode ser usado como um modelo mais generico, por exemplo 
 
 #### *Abstração* - simplificação, algo dentro do mundo real e colocar dentro do software que permite modelar objetos do mundo real em termos de suas características essenciais e comportamentos relevantes, sem se preocupar com os detalhes internos de implementação.
 
-### Stream API
+## Stream API
 
 Dentro da streams existe várias sequências de metodos, operadores..
 
@@ -257,7 +257,8 @@ O Built inicio do processo, intermediario são as operações que podem ser enca
 - Streams Sequencial -> Sempre um dado por vez, processa um produto, depois processa outro produto. 
 
 - Stream Paralela -> são criadas varias linhas de execução para ir processando os dados de forma paralela, indepedente de como será implementado.
-### Tratamento de Exceções em Java:
+## Tratamento de Exceções em Java
+
 O tratamento de exceções em Java é uma técnica usada para lidar com situações inesperadas ou erros que podem ocorrer durante a execução de um programa. Isso ajuda a tornar o código mais robusto e a fornecer informações úteis sobre o erro para que ele possa ser corrigido ou tratado adequadamente. O tratamento de exceções envolve os seguintes conceitos:
 
 Try-Catch Blocks: Um bloco try é usado para envolver o código que pode gerar uma exceção. Dentro do bloco try, você pode usar um ou mais blocos catch que capturam e tratam as exceções específicas que podem ocorrer.
@@ -276,11 +277,11 @@ Personalização de Exceções: Você também pode criar suas próprias classes 
 
 Método getMessage(): Todas as exceções possuem um método getMessage() que retorna uma descrição do erro, que pode ser útil para registro ou depuração.
 
-### BANCO DE DADOS 
+## BANCO DE DADOS 
 
 Comandos SQL:
 
-*DML - Data Manipulation Language:*
+### DML - Data Manipulation Language:*
 #### SELECT: Recupera dados de uma ou mais tabelas no banco de dados, permitindo que os usuários especifiquem as colunas, filtros e ordenações desejados.
 
 #### INSERT: Insere novos registros em uma tabela, adicionando dados às colunas especificadas.
@@ -289,7 +290,7 @@ Comandos SQL:
 
 #### DELETE: Remove registros de uma tabela com base em critérios específicos, eliminando os dados.
 
-*DDL - Data Definition Language:*
+### DDL - Data Definition Language:*
 
 #### CREATE: Cria um novo objeto de banco de dados, como uma tabela, índice, visão ou procedimento armazenado.
 
@@ -297,7 +298,7 @@ Comandos SQL:
 
 #### DROP: Exclui um objeto do banco de dados, como uma tabela, índice ou visão.
 
-*DCL - Data Control Language:*
+### DCL - Data Control Language:
 
 #### GRANT: Concede permissões específicas a usuários ou funções, permitindo que eles acessem e executem operações em objetos de banco de dados.
 
@@ -305,7 +306,7 @@ Comandos SQL:
 
 #### REVOKE: Remove as permissões anteriormente concedidas a usuários ou funções.
 
-*TCL - Transaction Control Language:*
+### TCL - Transaction Control Language:*
 #### COMMIT: Confirma uma transação, tornando as alterações permanentes no banco de dados.
 
 #### ROLLBACK: Desfaz uma transação, revertendo todas as alterações realizadas na transação.
@@ -314,16 +315,133 @@ Comandos SQL:
 
 #### RELEASE: Libera um ponto de salvamento criado com o comando SAVEPOINT, permitindo que as alterações após esse ponto sejam confirmadas.
 
+## Funções SQL e Exemplos
+
+### Funções de Agregação:
+
+- **COUNT()**: Conta o número de linhas retornadas por uma consulta.
+- **MAX()**: Retorna o maior valor de uma coluna.
+- **MIN()**: Retorna o menor valor de uma coluna.
+- **SUM()**: Calcula a soma dos valores em uma coluna.
+- **AVG()**: Calcula a média dos valores em uma coluna.
+
+### Seleção de Dados:
+
+- **DISTINCT**: Retorna apenas valores únicos de uma coluna.
+- **LIKE**: Usado para comparar um valor com padrões usando caracteres curinga (% para zero ou mais caracteres, _ para um único caractere).
+- **NOT LIKE**: Retorna linhas onde o valor de uma coluna não corresponde a um padrão especificado.
+
+### Ordenação de Resultados:
+
+- **ORDER BY**: Ordena os resultados da consulta com base em uma ou mais colunas, em ordem ascendente ou descendente.
+- **ASC/DESC**: Especifica a ordem de classificação como ascendente (ASC) ou descendente (DESC).
+
+### Filtragem de Dados:
+
+- **WHERE**: Filtra linhas com base em uma condição especificada.
+- **AND/OR**: Combina condições na cláusula WHERE para filtrar linhas com base em múltiplos critérios.
+- **BETWEEN**: Seleciona valores dentro de um intervalo especificado.
+- **IN**: Especifica múltiplos valores em uma condição de filtragem.
+
+### Exemplos e Atividades:
+
+1. **Exemplo de Uso do COUNT()**:
+
+SELECT COUNT(nome) FROM cursos;
 
 
-#### Tipos de JOINS
+2. **Exemplo de Uso do MAX()**:
+
+SELECT MAX(totaulas) FROM cursos;
+
+3. **Exemplo de Uso do DISTINCT**:
+
+
+SELECT DISTINCT nacionalidade FROM gafanhotos;
+
+
+**Atividade 1: Selecionar Todas as Mulheres e Contar o Número de Mulheres**:
+
+SELECT * FROM gafanhotos WHERE sexo = 'F';
+SELECT COUNT(*) FROM gafanhotos WHERE sexo = 'F';
+
+**Atividade 2: Selecionar Gafanhotos Nascidos Entre 2000 e 2015**:
+
+SELECT * FROM gafanhotos WHERE nascimento BETWEEN '2000-01-01' AND '2015-12-31' ORDER BY nome;
+
+
+**Atividade 3: Selecionar Programadores do Sexo Masculino e Contar o Número de Programadores**:
+SELECT * FROM gafanhotos WHERE profissao = 'Programador' AND sexo = 'M' ORDER BY nome;
+SELECT COUNT(*) FROM gafanhotos WHERE profissao = 'Programador';
+
+
+**Atividade 4: Selecionar Mulheres Brasileiras com Nomes Iniciando por 'J'**:
+
+SELECT * FROM gafanhotos WHERE nacionalidade = 'Brasil' AND sexo = 'F' AND nome LIKE 'J%';
+
+
+**Atividade 5: Selecionar Homens com 'Silva' no Nome, Não Brasileiros e com Peso Inferior a 100 Kg**:
+
+SELECT nome, nacionalidade FROM gafanhotos WHERE NOT nacionalidade = 'Brasil' AND sexo = 'M' AND nome LIKE '%Silva%' AND peso < 100 ORDER BY nome, nacionalidade;
+
+**Atividade 6: Calcular a Média da Altura dos Homens Brasileiros**:
+
+SELECT AVG(altura) FROM gafanhotos WHERE sexo = 'M' AND nacionalidade = 'Brasil';
+
+**Atividade 7: Calcular a Média do Peso dos Gafanhotos**:
+
+SELECT AVG(peso) FROM gafanhotos;
+
+**Atividade 8: Selecionar o Menor Peso entre as Mulheres Brasileiras Nascidas entre 1990 e 2000**:
+
+SELECT MIN(peso), nome FROM gafanhotos WHERE sexo = 'F' AND nacionalidade = 'Brasil' AND nascimento BETWEEN '90-01-01' AND '00-12-31' ORDER BY nome;
+
+**Atividade 9: Contar o Número de Mulheres Gafanhotos com Altura Superior a 1.90m**:
+
+SELECT COUNT(altura) FROM gafanhotos WHERE sexo = 'F' AND altura > '1.90';
+
+### Aprendizado em SQL: Agrupamento, Agregação e Distinção
+Nesta última aula, aprendi sobre os conceitos de agrupamento, agregação e distinção em SQL. Aqui está um resumo desses conceitos:
+
+Agrupamento: Processo de dividir os resultados de uma consulta em grupos com base em uma ou mais colunas.
+Agregação: Aplicação de funções de agregação, como COUNT, SUM, AVG, MIN e MAX, para calcular valores resumidos para cada grupo resultante do agrupamento.
+Distinção: Utilização da cláusula DISTINCT para remover registros duplicados de um conjunto de resultados.
+Exercícios Realizados:
+
+1. **Profissões dos Gafanhotos e Seus Quantitativos**:
+
+SELECT profissao, COUNT(*) FROM gafanhotos
+GROUP BY profissao;
+2. **Contagem de Gafanhotos por Sexo Nascidos Após uma Determinada Data**:
+
+SELECT sexo, COUNT(sexo) FROM gafanhotos
+WHERE nascimento > '2005-01-01'
+GROUP BY sexo;
+
+3. **Identificação de Países de Origem com Mais de 3 Gafanhotos:**
+
+SELECT nacionalidade, COUNT(nacionalidade) FROM gafanhotos
+WHERE nacionalidade <> 'Brasil' /// USADO NOT LIKE TAMBÉM
+GROUP BY nacionalidade
+HAVING COUNT(nacionalidade) > 3;
+
+4. **Agrupamento de Gafanhotos por Altura com Peso Maior que 100kg e Acima da Média**:
+
+SELECT altura, COUNT(*) FROM gafanhotos
+WHERE peso > 100
+GROUP BY altura
+HAVING altura > (SELECT AVG(altura) FROM gafanhotos)
+ORDER BY altura;
+
+### Tipos de JOINS
 
 *Inner Join* -> pega os dados de uma chave primaria (primary key) e de uma chave estrangeira(foregein key).
 
 A consulta do tipo inner é apenas relacionado entre duas tabelas. Aquilo que está fora das duas tabeolas é Outer (tudo aquilo que está fora).
 
-*Left Join* -> é aquilo que é comum mas ao lado esquerdo da relação. Por exemplo da tabela A e B. Pega-se tudo da tabela A, que seria o lado esquerdo + inner (aquilo que está no meio). 
+*Left Join* -> é aquilo que é comum mas ao lado esquerdo da relação. Por exemplo da tabela A e B. Pega-se tudo da tabela A, que seria o lado esquerdo + inner (aquilo que está no meio).
 
 *Right Join* -> é aquilo que é o comum mas ao lado direito da relação, é oposto de left.
 
 *Full Join* -> é possível simular fazendo o resultado de Left e Right Join com Inner. (não suportado por outros bancos mas suportado por outros bancos)
+
