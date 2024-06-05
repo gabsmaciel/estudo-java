@@ -7,8 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="estrutura" />
+        <module name="campo-minado-swing" />
+        <module name="jpa-example" />
         <module name="campo-minado" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="exercicios-jpa" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>

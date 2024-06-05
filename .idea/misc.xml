@@ -6,7 +6,15 @@
       <list>
         <option value="$PROJECT_DIR$/projetos/estrutura/pom.xml" />
         <option value="$PROJECT_DIR$/projetos/campo-minado/pom.xml" />
+        <option value="$PROJECT_DIR$/campo-minado-swing/pom.xml" />
+        <option value="$PROJECT_DIR$/jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/exercicios-jpa/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/jpa/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">

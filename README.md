@@ -433,15 +433,68 @@ GROUP BY altura
 HAVING altura > (SELECT AVG(altura) FROM gafanhotos)
 ORDER BY altura;
 
-### Tipos de JOINS
+## Modelo Relacional
+No modelo relacional, criamos relações com diversas ligações, permitindo, por exemplo, cadastrar uma pessoa através de um registro e, a partir desse registro, acessar informações como datas e documentos.
 
-*Inner Join* -> pega os dados de uma chave primaria (primary key) e de uma chave estrangeira(foregein key).
+### Chaves e Relacionamentos
+Chaves: Servem para identificar e relacionar entidades.
+Relacionamentos: Duas ou mais entidades podem se relacionar entre si. O Diagrama E-R (ou DER) é usado para representar essas relações.
 
-A consulta do tipo inner é apenas relacionado entre duas tabelas. Aquilo que está fora das duas tabeolas é Outer (tudo aquilo que está fora).
 
-*Left Join* -> é aquilo que é comum mas ao lado esquerdo da relação. Por exemplo da tabela A e B. Pega-se tudo da tabela A, que seria o lado esquerdo + inner (aquilo que está no meio).
+**Cardinalidade**
+- Muitos-para-Muitos: (N-N)
+- Um-para-Um: (1-1)
+- Um-para-Muitos: (1-N)
 
-*Right Join* -> é aquilo que é o comum mas ao lado direito da relação, é oposto de left.
 
-*Full Join* -> é possível simular fazendo o resultado de Left e Right Join com Inner. (não suportado por outros bancos mas suportado por outros bancos)
+**Chave Estrangeira**
+
+Adicionando uma chave estrangeira na tabela:
+
+Adicione uma nova coluna:
+ALTER TABLE gafanhotos
+ADD COLUMN cursopreferido INT;  -- Lembrar de especificar o tipo da variável
+
+Uso da chave estrangeira:
+
+ALTER TABLE gafanhotos
+ADD FOREIGN KEY (cursopreferido)
+REFERENCES cursos (idcurso);
+
+A integridade referencial impede alterações que afetem a estrutura de dados, como apagar um curso que esteja referenciado por alunos.
+
+Para listar os alunos, nome do curso e ano:
+
+SELECT gafanhotos.nome, cursos.nome, cursos.ano
+FROM gafanhotos INNER JOIN cursos
+ON cursos.idcurso = gafanhotos.cursopreferido
+ORDER BY gafanhotos.nome;
+
+
+**Uso de apelidos com AS:**
+SELECT g.nome, c.nome, c.ano
+FROM gafanhotos AS g INNER JOIN cursos AS c
+ON c.idcurso = g.cursopreferido
+ORDER BY g.nome;
+g -> gafanhotos
+c -> cursos
+
+**Tipos de Join**
+- Inner Join: Considera apenas as ligações (aquilo que está no centro).
+- Left Outer Join: Considera apenas a tabela à esquerda (gafanhotos).
+- Right Outer Join: Considera apenas a tabela à direita (cursos).
+
+Criação de uma Tabela de Muitos-para-Muitos
+
+CREATE TABLE gafanhoto_assiste_curso (
+id INT NOT NULL AUTO_INCREMENT,
+data DATE,
+idgafanhoto INT,
+idcurso INT,
+PRIMARY KEY (id),
+FOREIGN KEY (idgafanhoto) REFERENCES gafanhotos(id),
+FOREIGN KEY (idcurso) REFERENCES cursos(idcurso)
+) DEFAULT CHARSET=utf8;
+
+
 
