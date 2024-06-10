@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68754bb7-9cf0-40eb-8814-9deff1c74149" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/campo-minado-swing/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campo-minado-swing/src/main/java/modelo/Campo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/campo-minado-swing/src/main/java/modelo/Tabuleiro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetos/estrutura/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projetos/estrutura/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetos/estrutura/src/main/java/jdbc/TesteConexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetos/estrutura/src/main/java/jdbc/TesteConexao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetos/estrutura/src/main/java/swing/Observador.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetos/estrutura/src/main/java/swing/Observador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetos/estrutura/target/classes/swing/Observador$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetos/estrutura/target/classes/swing/Observador.class" beforeDir="false" afterPath="$PROJECT_DIR$/projetos/estrutura/target/classes/swing/Observador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercicios-jpa/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +18,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -132,7 +119,9 @@
       <workItem from="1715908303432" duration="1878000" />
       <workItem from="1716394916770" duration="10683000" />
       <workItem from="1717426571220" duration="798000" />
-      <workItem from="1717524802343" duration="13566000" />
+      <workItem from="1717524802343" duration="15254000" />
+      <workItem from="1718040670552" duration="39000" />
+      <workItem from="1718040723727" duration="6167000" />
     </task>
     <servers />
   </component>
