@@ -18,7 +18,8 @@ public class DAO<E> {
         try {
             emf = Persistence.createEntityManagerFactory("exercicios-jpa");
         } catch (Exception e) {
-            ///logar -> log4j
+            e.printStackTrace(); // Logar a exceção
+            throw new ExceptionInInitializerError("Initialization of EntityManagerFactory failed: " + e.getMessage());
         }
     }
 
@@ -28,6 +29,9 @@ public class DAO<E> {
 
     public DAO(Class<E> classe) {
         this.classe = classe;
+        if (emf == null) {
+            throw new IllegalStateException("EntityManagerFactory is not initialized.");
+        }
         em = emf.createEntityManager();
     }
 
@@ -50,15 +54,19 @@ public class DAO<E> {
         return this.abrirTransacao().incluir(entidade).fecharTransacao();
     }
 
+    public E obterPorID(Object id) {
+        return em.find(classe, id);
+    }
+
     public List<E> obterTodos() {
-        return this.obterTodos(10,0);
+        return this.obterTodos(10, 0);
     }
 
     public List<E> obterTodos(int qtde, int deslocamento) {
         if (classe == null) {
             throw new UnsupportedOperationException("Classe nula.");
         }
-        String jpql = "select e from" + classe.getName() + " e";
+        String jpql = "select e from " + classe.getName() + " e";
         TypedQuery<E> query = em.createQuery(jpql, classe);
         query.setMaxResults(qtde);
         query.setFirstResult(deslocamento);
@@ -69,4 +77,3 @@ public class DAO<E> {
         em.close();
     }
 }
-
