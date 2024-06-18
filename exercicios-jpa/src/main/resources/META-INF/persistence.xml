@@ -5,6 +5,7 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="exercicios-jpa">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <mapping-file>META-INF/orm.xml</mapping-file>
 
         <class>modelo.basico.Usuario</class>
         <class>modelo.basico.Produto</class>
@@ -16,6 +17,12 @@
         <class>modelo.muitospramuitos.Sobrinho</class>
         <class>modelo.muitospramuitos.Ator</class>
         <class>modelo.muitospramuitos.Filme</class>
+        <class>modelo.composicao.Endereco</class>
+        <class>modelo.composicao.Fornecedor</class>
+        <class>modelo.composicao.Funcionario</class>
+        <class>desafio.Veiculo</class>
+        <class>desafio.Carro</class>
+        <class>desafio.Moto</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver"

@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68754bb7-9cf0-40eb-8814-9deff1c74149" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/infra/ProdutoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/modelo/umpraum/Assento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/modelo/umpraum/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/teste/basico/NovoProduto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/teste/basico/ObterProdutos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/teste/umparaum/NovoClienteAssento1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/teste/umparaum/NovoClienteAssento2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/teste/umparaum/ObterClienteAssento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercicios-jpa/src/main/java/infra/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/java/infra/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercicios-jpa/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-jpa/src/main/resources/META-INF/persistence.xml" afterDir="false" />
@@ -62,7 +57,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "C:/workspace/estudos-java/campo-minado-swing",
+    "last_opened_file_path": "C:/workspace/estudos-java/exercicios-jpa",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -136,7 +131,7 @@
       <workItem from="1717524802343" duration="15254000" />
       <workItem from="1718040670552" duration="39000" />
       <workItem from="1718040723727" duration="6167000" />
-      <workItem from="1718177606609" duration="19400000" />
+      <workItem from="1718177606609" duration="28733000" />
     </task>
     <servers />
   </component>

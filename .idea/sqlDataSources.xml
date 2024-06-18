@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="ecca1125-58e9-4260-bec5-811aa074220e" name="DDL data source Mapping">
+      <data-sources db="4a9338d4-3f6c-443c-b5dc-5bce7326617b" ddl="6da22241-4385-44fb-b393-a8faa93a0f78" />
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="6da22241-4385-44fb-b393-a8faa93a0f78" />
+          <option name="name" value="DDL data source" />
+          <option name="dbmsName" value="UNKNOWN" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/exercicios-jpa" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
