@@ -1,7 +1,3 @@
-Aqui está a versão padronizada do seu texto para o GitHub, com ajustes para manter a clareza, coesão e organização das informações:
-
----
-
 # Estudos em Java
 
 Revisão dos estudos em Java com o Professor Leonardo no site da Udemy.
