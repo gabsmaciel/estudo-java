@@ -1,500 +1,348 @@
-# estudos-java
+Aqui está a versão padronizada do seu texto para o GitHub, com ajustes para manter a clareza, coesão e organização das informações:
 
-**Revisão dos estudos em Java com Professor Leonardo no site da Udemy.**
+---
+
+# Estudos em Java
+
+Revisão dos estudos em Java com o Professor Leonardo no site da Udemy.
 
 ## Fundamentos
 
-- uso de variavel -> tem por tipo, um nome ou valor inicial que pode ser alterado ao longo do tempo, ou seja, é comum que seja usado em várias partes do código. 
-- uso de constante -> é uma variavel cujo valor não pode ser alterado, para isso é definido a palavra "final".
-
-- inferência de tipo -> permite que o compilador com base do contexto do código infira um tipo de variavel. 
-exemplificando: o uso de uma var com determinado nome. var nome = "Nome da Pessoa", o compilador infere que esse tipo de variavel é uma String. 
-
-- tipos primitivos -> são primitivos porque não são objetos, métodos ou atributos, são usados para declarar variaveis. 
-são eles: byte, short, int, long, float, double, char, boolean. 
-lembrando que cada um armazena determinado valor na memória. 
-
-- notações ponto -> quando se tem tipos que não são primitivos, que não são nenhum dos citados acima poderá ter a notação ponto, trata-se do uso de um ponto após uma referência que tem outras funcionalidades.  
-
-- wrapper -> os wrappers são classes que envolvem os tipos primitivos com a permissão que seja tratados como objetos. (empacotamento no sentido literal). exemplificando: o byte se torna Byte, sendo que o segundo envolve o tipo primitivo do primeiro. 
-obs: eles fornecem metodos para converter valores entre tipos primitivos e objetos, bem como realização de operações lógicas e matemáticas. 
-
-conversão de número para string -> uso do .to.String
-
-conversão de string para número -> uso de Integer.pasrInt ou Double.parseDouble.
-
-operadores -> unários, binários e ternário. 
-exemplificando: 
-unários tem um único operando, com uso por exemplo. (a++) (um operando)
-binários tem operador soma, mas com uso de dois números. (3+2) (2 operandos)
-ternário caso especial, determinado valor com uma operação (?) e outro valor (:) outro valor. (3 operandos)
-
-operadores aritméticos -> aqueles usados em operações matematicas. (soma, subtração, multiplicação, divisão e módulo. 
-uso do módulo: utiliza-se para obter resto de uma divisão inteira. 
-
-operadores lógicos (TABELA VERDADE) -> && (E) - condição. 
-|| (OU) - basta uma expressão verdadeira. 
-! (NÃO) - nega uma expressão, dados como verdadeiro (true) ou falso (false). 
-
-operadores relacionais -> usados para comparar valores de expressões lógicas. 
-
-operadores relacionais -> booleanos, dados como verdadeiro (true) ou falso (false). 
-
-operadores ternários -> são operadores condicionais que permitem fazer condições em uma única linha de código.
-geralmente é usado a (?) para separar expressão verdadeiro ou falso. 
-pode ser usado (:) para separar o valor atribuido quando de uma expressão verdadeira ou falsa. 
-
-
+- **Uso de variável**: Uma variável possui um tipo, um nome e um valor inicial que pode ser alterado ao longo do tempo. Ela é comum em várias partes do código.
+- **Uso de constante**: Uma constante é uma variável cujo valor não pode ser alterado, sendo definido pela palavra-chave `final`.
+- **Inferência de tipo**: Permite ao compilador, com base no contexto do código, inferir o tipo da variável. Exemplo: `var nome = "Nome da Pessoa"`, onde o compilador infere que o tipo da variável é `String`.
+- **Tipos primitivos**: São tipos de dados básicos usados para declarar variáveis, como: `byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`. Cada tipo armazena valores diferentes na memória.
+- **Notação ponto**: Usada para acessar membros de tipos não primitivos (objetos), por exemplo, ao acessar métodos ou atributos de uma classe.
+- **Wrapper classes**: Classes que envolvem tipos primitivos, permitindo que sejam tratados como objetos. Exemplo: o tipo `byte` se torna `Byte`. Elas fornecem métodos para conversão de tipos primitivos para objetos e para realizar operações matemáticas e lógicas.
+- **Conversão de número para string**: Utiliza o método `.toString()`.
+- **Conversão de string para número**: Utiliza métodos como `Integer.parseInt()` ou `Double.parseDouble()`.
+- **Operadores**:
+  - **Unários**: Operam em um único operando (ex: `a++`).
+  - **Binários**: Operam em dois operandos (ex: `3 + 2`).
+  - **Ternários**: Usam uma condição para determinar um valor (ex: `condição ? valor1 : valor2`).
+- **Operadores aritméticos**: São usados em operações matemáticas, como soma, subtração, multiplicação, divisão e módulo. O módulo (`%`) retorna o resto de uma divisão inteira.
+- **Operadores lógicos**: 
+  - `&&` (E): Retorna `true` se ambas as expressões forem verdadeiras.
+  - `||` (OU): Retorna `true` se ao menos uma expressão for verdadeira.
+  - `!` (NÃO): Nega uma expressão.
+- **Operadores relacionais**: Usados para comparar valores, retornando valores booleanos.
+  
 ## Classes e Métodos
 
-- revisão sobre classe -> até a fase de controle foi apenas criado o main, mas agora terá divisões. 
-uma classe DEFINE um bloco de código. 
-temos public class (nome da Classe) {
-bloco de código
-}
-
-- Anatomia de uma classe -> class (nome reservado) por pratica começa com letra maiúscula, geralmente antes da CLASS vem o modificador. 
-
-modificadores - class Nome ... {
-//corpo 
-atributos e comportamentos(termos de ação). 
-}
-
-- atributos -> dados, exemplo: do tipo int, boolean, Date, String (primitivos ou não).
-- comportamentos -> métodos, exemplo: são os comportamentos, uso de estruturas de controle ou não.  
-atributos e comportamentos são MEMBROS da classe que são dados que tem estruturas de dados de como uma forma será comportada e os métodos que é nossos algoritmos. 
-
-- A ideia da classe é justamente a junção de ambos. (atributos e métodos)
-
-Uma classe define um tipo personalizado ou uma estrutura de dados. A classe representa uma abstração (uma simplificação), uma modelação do mundo real para desenvolvimento de um software. 
-A partir de uma classe (estrutura de dados) criamos objetos que representa os dados.  
-Objeto == Instância (são sinônimos). 
-
-_Relação entre Classe e Objeto_
-
-Classe (Molde) - > pode criar outras que são denominados de instâncias, ou seja, o molde da classe pode ser aplicado para outras instâncias (objetos), os valores podem mudar mas a estrutura em si continua a mesma. Exemplo: uma calça, temos o molde e podemos criar varios tipos de calças seja de seda, algodão etc. 
-
-Em contexto de Programação, temos um Produto (classe) que possui 3 atributos (nome, preço, desconto - tipos) mas temos OBJETOS (instâncias) desse produto que o eventualmente terá nome, preço e desconto. 
-
-O construtor é um metodo especial, responsável a partir de uma classe cria um objeto. 
-
-- Membros de uma classe -> atributos, métodos e construtores. 
-- Acessar os membros -> notação ponto (.) objeto.membro - a partir de um objeto consegue acessar os membros dele, eventualmente de uma classe também. 
-
-_Método e Construtor_
-
-Anatomia do Método -> após o algoritmo receber sequência de passos, eventualmente essa sequência irá receber parametros de entrada e eventualmente de saída também, mas também pode receber e não retornar nada, não necessariamente receber nada ou sair. 
-
-nomeMetodo(PARAMETRO) { algoritmo
-}
- - O método poderia retornar uma string, int ou pode não retornar nada que seria o VOID (ausência de retorno). 
-
-Exemplificação de um método que soma. 
-
-int Somar(nome do Metodo) ( int a, int b){
-//uma função que recebe dois parametros de entrada e retorna UM valor.
-para retornar deve ser usado RETURN. 
-Implementação -> return a+b; 
-}
-Dentro de uma classe não pode ter dois métodos com mesmo nome e mesmo tipo.
-
-Construtores -> geralmente nome da classe e nome do construtor possui mesmo nome. O construtor padrão é aquele que não recebe nenhum parametro. 
-Exemplo: Produto p1 = new Produto();   - trata-se de um construtor padrão a segunda parte. 
-Para distinguir um método de construtor é o retorno, construtor NÃO tem retorno. 
-- java/classe desafioData exemplifica 3 tipos de uso do construtor.  
-
-### Classe e Instância
-
-Com uso da palavra new (palavra reservada), uma nova instância é criada. A instância terá espaços de memórias. 
-Qual a diferença de ter um atributo de classe? Com uso de static, o atributo pertence a classe e será associado ao mesmo. 
-
-Exemplificando: tenho uma Classe Data, essa classe possui dia, mês e ano. Se instancio, posso armazenar na memória determinado valor.
-Mas se acontecer de na Classe Data, mas se eu tornar STATIC o dia por exemplo o valor atribuido pertence a classe e não a cada uma das instâncias. 
-Se a Classe tiver o dia 3 e ele é static, todas as outras instâncias também terá por dia o 3 e não o valor armazenado na memória instanciada.
-
-_Atribuição por Valor e Atribuição por Referência_
-
-Atribuição por Valor -> Primitivos
-Atribuição por Referência -> Objetos 
-
-_*Valores Padrão*_
-
-- na criaçao de byte, short, int, long = 0 
--float, double = 0
--boolean -> false
-- chart -> \u000'
-Objetos tem por padrão -> null - a variavel não aponta para nenhum endereço de memória. 
-
-_*Arrays*_
-
--É estático, tamanho fixo. No momento da criação deve terminar o tamanho do Array. 
-- Homogêneo, significa que o tipo não pode ser mudado.(os dados contidos nele não pode ser mudado)
-- Array é um objeto (possui atributos).
-- Array dentro de um Array é uma Matriz. 
-
-_*Equals*_
-
--É um metodo que está disponivel em todos os metodos em Java. Todo objeto que seja do proprio Java recebe o metodo equals. 
-
--Retorna boolean. (true/false)
-
-_*HashCode*_
-
--É mais rápido, comparando inteiros. 
--É uma função que retorna inteiro.
-
-- Resumindo, o método equals() é usado para comparar o valor dos objetos, enquanto o método hashCode() é usado para obter um código hash que representa a identidade do objeto para fins de organização em estruturas de dados.
-
-_*Collections*_
-
-Collection -> É a interface raiz da hierarquia de coleções. Ela define os métodos básicos que todas as coleções devem ter, como add(), remove(), contains() e size().
-
-- *Set*
-
-Não ordernado (por padrão), não indexado(não tem como acessar através do indice), não aceita repetição. 
-
-Set-> É uma interface que estende a interface Collection e representa uma coleção de elementos únicos, ou seja, não permite elementos duplicados. Exemplos de implementações de Set incluem HashSet e TreeSet.
-TreeSet -> ordem que foi inserido.
-SortSet -> lista de conjunto ordernados. 
-
-- *List*
-
-É parecido com Array, acessa através do indice. 
-Indexado e aceita repetição. (de dados)
-
-List -> É uma interface que estende a interface Collection e representa uma sequência ordenada de elementos, onde os elementos podem ser acessados por meio de índices. Alguns exemplos de implementações de List são ArrayList e LinkedList.
-
-- *Map*
-
-Chave/Valor.
-Chave não aceita repetição. 
-Valor não aceita repetição. 
-Map -> É uma interface que mapeia chaves a valores. Cada chave é única e é associada a um valor correspondente. Exemplos de implementações de Map são HashMap, TreeMap e LinkedHashMap.
-
-- *Queue* (Fila)
-
-Implementa fila.
-Primeiro que entra e primeiro que sai. 
-Offer retorna true ou false. 
-Offer e Add -> adicionam elementos na fila, a diferença é o comportamento quando a fila está cheia. 
-Peek e Element -> obtem o próximo elemento da fila (sem remover), peek retorna false e element lança uma exceção. 
-
-- *Stack* (Pilha)
-
-Implementa Pilha (stack)
-Primeiro que entra, é o ultimo que sai. 
-
-## Orientação a Objeto
-
-- Reuso via composição
-
-- Um objeto é composto por outro objeto que se relacionam entre si.
-
-- Relação um para um: carro -> motor.
-
-- Relação um para n: compra -> itens (vários itens).
-
-- Relação n para n: tios -> sobrinhos.
-
-#### *Encapsulamento* - um objeto (classe do objeto) precisa estar escondido do mundo exterior. Não é necessário conhecer a fundo o objeto. O que precisa ou não de visibilidade.
-
-* Modificadores de acesso: public, protected, private.
-
-Private: ele só pode ser acessado dentro da própria classe (restrito).
-Public: pode ser acessado por todos.
-Protected: atributo ou método que pode ser acessado através do mesmo pacote.
-#### *Herança* - também é um reuso de código. A herança é uma relação "é-um", em que a subclasse é um tipo mais específico da superclasse. Isso significa que a subclasse herda os membros (atributos e métodos) da superclasse e também pode adicionar novos membros ou modificar os existentes. Dessa forma, a herança promove a reutilização de código, pois as classes derivadas não precisam reescrever ou reimplementar os membros herdados.
-
-- Superclasse: é mais genérica.
-- Subclasse: é mais específica.
-- A herança utiliza a palavra-chave extends.
-
-#### *Polimorfismo* -permite tratar objetos de diferentes classes de forma uniforme, desde que compartilhem uma relação de herança ou implementem uma interface em comum. Existem dois tipos principais de polimorfismo: sobrescrita e sobrecarga.
-
-- exemplo: Carro (super classe) -> Civic e Ferrari (classes). 
-
-Civic c = new Civic(); //pode acontecer das duas formas. Do tipo mais espeficio para tipo mais generico.
-Carro c = new Civic (); 
-
-Para chamar um construtor na herança da classe pai, usa-se o super() diferentemente do this(). 
-
-
-getters e setters -> quando se cria atributos dentro de uma classe via de regra colocamos atributos como privatos e usamos getters e setters. 
-
-#### *Interface* - uma interface em Java é uma especificação de um conjunto de métodos e constantes que outras classes podem implementar. Uso da palavra implements na classe. 
-
-- Classe concreta -> todos os metodos estão definidos ou implementados. (todos possui corpo) geralmente por uso de chaves dentro a implementação. 
-
-A interface por outro lado os metodos não tem corpo. 
-
-- Classe abstrata -> pode ter metodos abstratos ou pode ser completamente concreta, todos os metodos definidos. A classe abstrata não pode ser instanciada. 
-O uso da palavra abstract impede um novo instanciamento. 
-
-
-- Na criação de metódo, por exemplo estacionar (Civic c) {..}
-metodo especifico. Mas pode ser usado como um modelo mais generico, por exemplo no lugar de Civic, passar Carro que é mais generico. 
-
-
-#### *Abstração* - simplificação, algo dentro do mundo real e colocar dentro do software que permite modelar objetos do mundo real em termos de suas características essenciais e comportamentos relevantes, sem se preocupar com os detalhes internos de implementação.
+- **Classe**: É a definição de um bloco de código que descreve o comportamento e os dados de um tipo de objeto.
+  - Exemplo: `public class NomeDaClasse { // corpo da classe }`
+- **Anatomia de uma classe**:
+  - `class` (nome reservado) geralmente começa com letra maiúscula.
+  - Pode ter modificadores (como `public`, `private`) antes do nome da classe.
+- **Atributos e Comportamentos**:
+  - **Atributos**: São os dados da classe, como `int`, `String`, `boolean`, etc.
+  - **Comportamentos**: São os métodos da classe, que definem ações a serem realizadas.
+  - Juntos, atributos e métodos formam os membros da classe.
+- **Relação entre Classe e Objeto**:
+  - Uma classe serve como molde para criar objetos, que são instâncias dessa classe.
+  - Exemplo: Uma classe `Produto` pode ser usada para criar diferentes objetos, como um `Produto` com nome, preço e desconto.
+  
+- **Método e Construtor**:
+  - **Método**: Define ações que um objeto pode executar. Exemplo de um método que soma dois números:
+    ```java
+    int somar(int a, int b) {
+        return a + b;
+    }
+    ```
+  - **Construtor**: É um método especial usado para criar objetos a partir de uma classe. Exemplo:
+    ```java
+    Produto p1 = new Produto();  // Construtor padrão
+    ```
+  
+## Orientação a Objetos
+
+- **Encapsulamento**: O encapsulamento esconde os detalhes internos de um objeto, permitindo acesso controlado através de modificadores de acesso (`private`, `public`, `protected`).
+  
+- **Herança**: A herança permite que uma subclasse herde atributos e métodos de uma superclasse, promovendo o reuso de código.
+  
+- **Polimorfismo**: Permite tratar objetos de diferentes classes de forma uniforme, através da sobrescrita ou sobrecarga de métodos.
+  
+- **Interface**: Define métodos e constantes que outras classes podem implementar, promovendo a flexibilidade no design do código.
+  
+- **Abstração**: Simplificação de objetos do mundo real para seu uso no software, destacando características e comportamentos essenciais.
 
 ## Stream API
 
-Dentro da streams existe várias sequências de metodos, operadores..
+- **Construção de Streams**: Pode ser feita de várias formas, como por métodos estáticos ou a partir de uma lista.
+- **Operações Intermediárias**: Transformam os dados de maneira encadeada, sem alterar a stream original.
+- **Operações Terminais**: Marcam o fim da operação com a stream, retornando um resultado final.
 
-- Built Op (Construção) -> criar streams, pode ser criada de formas diferentes com metodos estaticos, pode ser através de uma lista. É chamada a operação de construção. 
+## Tratamento de Exceções
 
-- Intermediario Ops -> Transforma os dados passando por várias funções, uma função pequena que tenha poucas responsabilidades e vai encadeando informações. Facilmente encadeadas uma atras da outra. As intermediarias sempre retorna uma nova stream. 
+- **Try-Catch**: Bloco usado para capturar e tratar exceções.
+- **Exceções Verificadas e Não Verificadas**: Exceções verificadas precisam ser tratadas explicitamente, enquanto exceções não verificadas não necessitam de tratamento obrigatório.
+- **Bloco Finally**: Usado para garantir a execução de código de limpeza, independentemente de ocorrer ou não uma exceção.
 
-- Terminal Ops (Terminais) -> Entre as operações intermediarias, a operação final é a ponta do processo. (final) 
+### Banco de Dados
 
-O Built inicio do processo, intermediario são as operações que podem ser encadeadas em quantos passos precisar para implementar algoritmo. (inicio, meio e fim).
+#### DML (Data Manipulation Language):
 
+- **SELECT**: Recupera dados de uma ou mais tabelas.
+- **INSERT**: Adiciona novos registros a uma tabela.
 
-- Streams Ordernadas -> uma sequência a ser seguida. 
+```sql
+INSERT INTO tabela (coluna1, coluna2) VALUES (valor1, valor2);
+```
 
-- Não ordernadas -> não tem necessariamente uma ordernação. 
+- **UPDATE**: Modifica dados existentes.
 
-- Streams Sequencial -> Sempre um dado por vez, processa um produto, depois processa outro produto. 
+```sql
+UPDATE tabela SET coluna1 = valor1 WHERE condição;
+```
 
-- Stream Paralela -> são criadas varias linhas de execução para ir processando os dados de forma paralela, indepedente de como será implementado.
-## Tratamento de Exceções em Java
+- **DELETE**: Exclui registros.
 
-O tratamento de exceções em Java é uma técnica usada para lidar com situações inesperadas ou erros que podem ocorrer durante a execução de um programa. Isso ajuda a tornar o código mais robusto e a fornecer informações úteis sobre o erro para que ele possa ser corrigido ou tratado adequadamente. O tratamento de exceções envolve os seguintes conceitos:
+```sql
+DELETE FROM tabela WHERE condição;
+```
 
-Try-Catch Blocks: Um bloco try é usado para envolver o código que pode gerar uma exceção. Dentro do bloco try, você pode usar um ou mais blocos catch que capturam e tratam as exceções específicas que podem ocorrer.
+#### DDL (Data Definition Language):
 
-Exceções Verificadas (Checked Exceptions): São exceções que o compilador verifica se são tratadas ou declaradas no método. Para tratá-las, use blocos catch correspondentes ou declarações throws no cabeçalho do método.
+- **CREATE TABLE**: Cria uma tabela com suas colunas e tipos de dados.
 
-Exceções Não Verificadas (Unchecked Exceptions): Também conhecidas como exceções de tempo de execução, não precisam ser tratadas ou declaradas explicitamente. Elas ocorrem durante a execução e geralmente indicam erros no código.
+```sql
+CREATE TABLE tabela (coluna1 tipo_de_dado, coluna2 tipo_de_dado);
+```
 
-Bloco Finally: Pode ser usado após um bloco try-catch para conter código que sempre será executado, independentemente de ocorrer ou não uma exceção. É usado para liberar recursos ou realizar ações de limpeza.
+- **ALTER TABLE**: Modifica a estrutura de uma tabela existente.
 
-Declaração Throws: Pode ser usada para propagar a exceção para o chamador do método, em vez de tratá-la no próprio método.
+```sql
+ALTER TABLE tabela ADD coluna tipo_de_dado;
+```
 
-Cadeia de Exceções (Exception Chaining): Permite encapsular uma exceção original dentro de outra exceção. Isso pode ser útil para fornecer informações mais detalhadas sobre a causa do erro.
+- **DROP TABLE**: Exclui uma tabela.
 
-Personalização de Exceções: Você também pode criar suas próprias classes de exceção personalizadas estendendo a classe Exception ou RuntimeException, de acordo com a natureza da exceção.
+```sql
+DROP TABLE tabela;
+```
 
-Método getMessage(): Todas as exceções possuem um método getMessage() que retorna uma descrição do erro, que pode ser útil para registro ou depuração.
+#### Funções de Agregação:
 
-## BANCO DE DADOS 
+- **COUNT**: Conta o número de registros.
+- **SUM**: Soma os valores de uma coluna numérica.
+- **AVG**: Calcula a média.
+- **MIN/MAX**: Retorna o menor ou maior valor.
 
-Comandos SQL:
+```sql
+SELECT COUNT(*), SUM(preço) FROM produtos;
+```
 
-### DML - Data Manipulation Language:*
-#### SELECT: Recupera dados de uma ou mais tabelas no banco de dados, permitindo que os usuários especifiquem as colunas, filtros e ordenações desejados.
+#### JOINs:
 
-#### INSERT: Insere novos registros em uma tabela, adicionando dados às colunas especificadas.
+- **INNER JOIN**: Retorna dados quando há correspondência em ambas as tabelas.
+- **LEFT JOIN**: Retorna todos os dados da tabela à esquerda, e os dados correspondentes da tabela à direita.
+- **RIGHT JOIN**: Retorna todos os dados da tabela à direita, e os dados correspondentes da tabela à esquerda.
 
-#### UPDATE: Modifica registros existentes em uma tabela, permitindo a atualização dos valores das colunas.
+Exemplo de **INNER JOIN**:
 
-#### DELETE: Remove registros de uma tabela com base em critérios específicos, eliminando os dados.
+```sql
+SELECT produtos.nome, categorias.nome
+FROM produtos
+INNER JOIN categorias ON produtos.categoria_id = categorias.id;
+```
 
-### DDL - Data Definition Language:*
+#### Normalização:
 
-#### CREATE: Cria um novo objeto de banco de dados, como uma tabela, índice, visão ou procedimento armazenado.
+Processo para organizar dados, reduzir redundâncias e garantir a integridade. As formas normais mais comuns são 1FN, 2FN e 3FN.
 
-#### ALTER: Modifica a estrutura de um objeto existente no banco de dados, como adicionar ou remover colunas de uma tabela.
+#### Transações:
 
-#### DROP: Exclui um objeto do banco de dados, como uma tabela, índice ou visão.
+As transações garantem a integridade dos dados, seguindo o modelo ACID:
 
-### DCL - Data Control Language:
+- **Atomicidade**: Tudo ou nada, ou a transação é concluída ou nada acontece.
+- **Consistência**: A transação leva o banco de dados de um estado válido a outro.
+- **Isolamento**: As operações de uma transação são isoladas de outras.
+- **Durabilidade**: As mudanças feitas são permanentes após o commit.
 
-#### GRANT: Concede permissões específicas a usuários ou funções, permitindo que eles acessem e executem operações em objetos de banco de dados.
+#### Índices:
 
-#### DENY: Nega explicitamente permissões a usuários ou funções, restringindo o acesso a objetos de banco de dados.
+- **Índice único**: Garante que os valores sejam únicos.
+- **Índice composto**: Índice baseado em várias colunas.
+- **Índice de texto completo**: Para buscas rápidas em colunas de texto.
 
-#### REVOKE: Remove as permissões anteriormente concedidas a usuários ou funções.
+Exemplo de índice composto:
 
-### TCL - Transaction Control Language:*
-#### COMMIT: Confirma uma transação, tornando as alterações permanentes no banco de dados.
+```sql
+CREATE INDEX idx_produto_preço ON produtos (nome, preço);
+```
 
-#### ROLLBACK: Desfaz uma transação, revertendo todas as alterações realizadas na transação.
+#### Restrições (Constraints):
 
-#### SAVEPOINT: Cria um ponto de salvamento dentro de uma transação, permitindo a restauração para esse ponto específico em caso de necessidade.
+- **PRIMARY KEY**: Garante valores únicos e não nulos.
+- **FOREIGN KEY**: Define relações entre tabelas.
+- **UNIQUE**: Garante valores únicos, mas permite nulos.
+- **NOT NULL**: Impede valores nulos.
+- **CHECK**: Define restrições em valores.
 
-#### RELEASE: Libera um ponto de salvamento criado com o comando SAVEPOINT, permitindo que as alterações após esse ponto sejam confirmadas.
+Exemplo de criação de tabela com restrições:
 
-## Funções SQL e Exemplos
+```sql
+CREATE TABLE clientes (
+    id INT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE
+);
+```
+# Conceitos Web
 
-### Funções de Agregação:
+## TCP/IP (Transmission Control Protocol / Internet Protocol)
 
-- **COUNT()**: Conta o número de linhas retornadas por uma consulta.
-- **MAX()**: Retorna o maior valor de uma coluna.
-- **MIN()**: Retorna o menor valor de uma coluna.
-- **SUM()**: Calcula a soma dos valores em uma coluna.
-- **AVG()**: Calcula a média dos valores em uma coluna.
+O **TCP/IP** é um protocolo orientado a conexão e confiável. Ele é baseado em camadas (*layers*), que dividem a responsabilidade da comunicação em diferentes estágios.
 
-### Seleção de Dados:
+### As camadas do TCP/IP incluem:
+- **Camada Física / Rede:** Responsável pela transmissão de dados através de meios físicos (cabos, Wi-Fi).
+- **Internet:** Gerencia o roteamento dos pacotes de dados entre os dispositivos.
+- **Transporte:** Assegura que os dados cheguem corretamente ao destino (ex: TCP).
+- **Aplicação:** Interface com o usuário e os serviços (ex: HTTP, FTP).
 
-- **DISTINCT**: Retorna apenas valores únicos de uma coluna.
-- **LIKE**: Usado para comparar um valor com padrões usando caracteres curinga (% para zero ou mais caracteres, _ para um único caractere).
-- **NOT LIKE**: Retorna linhas onde o valor de uma coluna não corresponde a um padrão especificado.
+A comunicação ocorre da seguinte maneira: a aplicação depende da camada de transporte, que depende da camada da internet, que, por sua vez, depende da camada física/rede. Cada camada tem uma responsabilidade específica.
 
-### Ordenação de Resultados:
+**Exemplo:**  
+Ao fazer uma requisição HTTP, o pacote passa por todas as camadas antes de chegar ao servidor e ser processado. A resposta segue o mesmo caminho de volta.
 
-- **ORDER BY**: Ordena os resultados da consulta com base em uma ou mais colunas, em ordem ascendente ou descendente.
-- **ASC/DESC**: Especifica a ordem de classificação como ascendente (ASC) ou descendente (DESC).
+---
 
-### Filtragem de Dados:
+## Host e SubRede
 
-- **WHERE**: Filtra linhas com base em uma condição especificada.
-- **AND/OR**: Combina condições na cláusula WHERE para filtrar linhas com base em múltiplos critérios.
-- **BETWEEN**: Seleciona valores dentro de um intervalo especificado.
-- **IN**: Especifica múltiplos valores em uma condição de filtragem.
+- **Host:** Refere-se ao dispositivo conectado à rede (computador, servidor, etc.).
+- **SubRede:** Uma divisão de uma rede maior, permitindo a organização e o gerenciamento eficiente dos dispositivos conectados.
 
-### Exemplos e Atividades:
+**Exemplo:**  
+Se uma rede tem o IP `192.168.1.0/24`, a sub-rede pode ser algo como `192.168.1.0/25`, que divide o espaço de endereços IP em duas sub-redes menores.
 
-1. **Exemplo de Uso do COUNT()**:
+---
 
-SELECT COUNT(nome) FROM cursos;
+## Conceito de Porta
 
+As portas são usadas para identificar aplicações específicas em um dispositivo. Quando um servidor recebe uma requisição, ele usa o número da porta para saber qual serviço deve processar a requisição.
 
-2. **Exemplo de Uso do MAX()**:
+**Exemplo:**  
+Ao acessar `http://www.exemplo.com:8080`, o número `8080` indica a porta usada para a comunicação com o servidor.
 
-SELECT MAX(totaulas) FROM cursos;
+---
 
-3. **Exemplo de Uso do DISTINCT**:
+## Protocolo HTTP (HyperText Transfer Protocol)
 
+O **HTTP** é um protocolo de comunicação utilizado na troca de dados entre cliente e servidor, especialmente para acessar páginas web. Ele é baseado em hipertexto, ou seja, os documentos contêm links para outros documentos ou recursos.
 
-SELECT DISTINCT nacionalidade FROM gafanhotos;
+### Principais características:
+- **Stateless:** Cada requisição é tratada como nova, sem lembrar do estado anterior.
 
+**Exemplo:**  
+Quando um usuário acessa uma URL (ex: `http://www.exemplo.com`), o navegador envia uma requisição HTTP para o servidor. O servidor responde com um documento HTML, que é renderizado pelo navegador.
 
-**Atividade 1: Selecionar Todas as Mulheres e Contar o Número de Mulheres**:
+---
 
-SELECT * FROM gafanhotos WHERE sexo = 'F';
-SELECT COUNT(*) FROM gafanhotos WHERE sexo = 'F';
+## Cliente-Servidor
 
-**Atividade 2: Selecionar Gafanhotos Nascidos Entre 2000 e 2015**:
+No modelo **cliente-servidor**, o cliente envia uma requisição ao servidor, e este responde com um recurso ou dado solicitado.
 
-SELECT * FROM gafanhotos WHERE nascimento BETWEEN '2000-01-01' AND '2015-12-31' ORDER BY nome;
+**Fluxo da Requisição HTTP:**
+1. O usuário digita a URL no navegador.
+2. O navegador gera uma requisição HTTP para o servidor.
+3. O servidor processa a requisição e envia a resposta.
+4. O navegador exibe a página recebida do servidor.
 
+---
 
-**Atividade 3: Selecionar Programadores do Sexo Masculino e Contar o Número de Programadores**:
-SELECT * FROM gafanhotos WHERE profissao = 'Programador' AND sexo = 'M' ORDER BY nome;
-SELECT COUNT(*) FROM gafanhotos WHERE profissao = 'Programador';
+## Métodos HTTP
 
+O protocolo HTTP possui diferentes métodos para especificar a operação a ser realizada na requisição:
 
-**Atividade 4: Selecionar Mulheres Brasileiras com Nomes Iniciando por 'J'**:
+- **GET:** Solicita a recuperação de dados do servidor (ex: acessar uma página web).
+- **POST:** Envia dados ao servidor (ex: enviar um formulário).
+- **PUT:** Atualiza ou cria um recurso no servidor (ex: atualizar dados de um usuário).
+- **DELETE:** Remove um recurso do servidor (ex: excluir um comentário).
+- **TRACE:** Recupera o caminho seguido pela requisição até o servidor.
+- **OPTIONS:** Solicita os métodos permitidos pelo servidor para um recurso.
+- **CONNECT:** Estabelece um túnel de comunicação (ex: para SSL).
+- **HEAD:** Semelhante ao GET, mas sem o corpo da resposta (apenas os cabeçalhos).
 
-SELECT * FROM gafanhotos WHERE nacionalidade = 'Brasil' AND sexo = 'F' AND nome LIKE 'J%';
+---
 
+## Grupos de Status HTTP
 
-**Atividade 5: Selecionar Homens com 'Silva' no Nome, Não Brasileiros e com Peso Inferior a 100 Kg**:
+Os status HTTP são códigos retornados pelo servidor para informar o estado da requisição. Eles são agrupados em várias categorias:
 
-SELECT nome, nacionalidade FROM gafanhotos WHERE NOT nacionalidade = 'Brasil' AND sexo = 'M' AND nome LIKE '%Silva%' AND peso < 100 ORDER BY nome, nacionalidade;
+### Informações (1xx):
+- **100 Continue:** O servidor recebeu o cabeçalho da requisição, e o cliente pode continuar enviando o corpo.
 
-**Atividade 6: Calcular a Média da Altura dos Homens Brasileiros**:
+### Sucesso (2xx):
+- **200 OK:** A requisição foi processada com sucesso.
 
-SELECT AVG(altura) FROM gafanhotos WHERE sexo = 'M' AND nacionalidade = 'Brasil';
+### Redirecionamento (3xx):
+- **301 Moved Permanently:** O recurso foi movido permanentemente para outro endereço.
 
-**Atividade 7: Calcular a Média do Peso dos Gafanhotos**:
+### Erro no Cliente (4xx):
+- **404 Not Found:** O recurso solicitado não foi encontrado.
 
-SELECT AVG(peso) FROM gafanhotos;
+### Erro no Servidor (5xx):
+- **500 Internal Server Error:** O servidor encontrou um erro ao tentar processar a requisição.
 
-**Atividade 8: Selecionar o Menor Peso entre as Mulheres Brasileiras Nascidas entre 1990 e 2000**:
+---
 
-SELECT MIN(peso), nome FROM gafanhotos WHERE sexo = 'F' AND nacionalidade = 'Brasil' AND nascimento BETWEEN '90-01-01' AND '00-12-31' ORDER BY nome;
+## Servidores Web
 
-**Atividade 9: Contar o Número de Mulheres Gafanhotos com Altura Superior a 1.90m**:
+Os servidores web são responsáveis por entregar páginas e recursos web para os clientes. Eles processam requisições HTTP/HTTPS, gerenciam conteúdos estáticos e dinâmicos, e interagem com bancos de dados e aplicações.
 
-SELECT COUNT(altura) FROM gafanhotos WHERE sexo = 'F' AND altura > '1.90';
+---
 
-### Aprendizado em SQL: Agrupamento, Agregação e Distinção
-Nesta última aula, aprendi sobre os conceitos de agrupamento, agregação e distinção em SQL. Aqui está um resumo desses conceitos:
+## Web e DNS
 
-Agrupamento: Processo de dividir os resultados de uma consulta em grupos com base em uma ou mais colunas.
-Agregação: Aplicação de funções de agregação, como COUNT, SUM, AVG, MIN e MAX, para calcular valores resumidos para cada grupo resultante do agrupamento.
-Distinção: Utilização da cláusula DISTINCT para remover registros duplicados de um conjunto de resultados.
-Exercícios Realizados:
+O **DNS (Domain Name System)** é como a "agenda telefônica" da internet, traduzindo nomes de domínio legíveis por humanos (ex: `www.exemplo.com`) para endereços IP (ex: `192.168.1.1`).
 
-1. **Profissões dos Gafanhotos e Seus Quantitativos**:
+**Exemplo:**  
+Usuário digita `www.meusite.com`. O DNS converte para o IP do servidor associado e conecta o cliente ao site.
 
-SELECT profissao, COUNT(*) FROM gafanhotos
-GROUP BY profissao;
-2. **Contagem de Gafanhotos por Sexo Nascidos Após uma Determinada Data**:
+---
 
-SELECT sexo, COUNT(sexo) FROM gafanhotos
-WHERE nascimento > '2005-01-01'
-GROUP BY sexo;
+## Virtual Hosting
 
-3. **Identificação de Países de Origem com Mais de 3 Gafanhotos:**
+O **Virtual Hosting** permite que um único servidor físico hospede vários sites, otimizando recursos.
 
-SELECT nacionalidade, COUNT(nacionalidade) FROM gafanhotos
-WHERE nacionalidade <> 'Brasil' /// USADO NOT LIKE TAMBÉM
-GROUP BY nacionalidade
-HAVING COUNT(nacionalidade) > 3;
+### Tipos:
+- **Baseado em Nome:** Diferentes sites usam o mesmo IP, diferenciados pelo domínio.
+- **Baseado em IP:** Cada site possui um endereço IP único.
 
-4. **Agrupamento de Gafanhotos por Altura com Peso Maior que 100kg e Acima da Média**:
+**Exemplo:**  
+Um servidor pode hospedar `site1.com` e `site2.com`, respondendo adequadamente dependendo da URL requisitada.
 
-SELECT altura, COUNT(*) FROM gafanhotos
-WHERE peso > 100
-GROUP BY altura
-HAVING altura > (SELECT AVG(altura) FROM gafanhotos)
-ORDER BY altura;
+---
 
-## Modelo Relacional
-No modelo relacional, criamos relações com diversas ligações, permitindo, por exemplo, cadastrar uma pessoa através de um registro e, a partir desse registro, acessar informações como datas e documentos.
+## Web Stack
 
-### Chaves e Relacionamentos
-Chaves: Servem para identificar e relacionar entidades.
-Relacionamentos: Duas ou mais entidades podem se relacionar entre si. O Diagrama E-R (ou DER) é usado para representar essas relações.
+A **Web Stack** é o conjunto de tecnologias necessárias para que um site ou aplicação funcione:
 
+1. **Sistema Operacional:** Gerencia os recursos físicos (ex: Linux, Windows Server).
+2. **Web Service:** Gerencia requisições HTTP/HTTPS (ex: Apache, Nginx).
+3. **Banco de Dados:** Armazena informações (ex: MySQL, MongoDB).
+4. **Linguagem de Programação:** Desenvolve a lógica da aplicação (ex: PHP, Python, Node.js).
 
-**Cardinalidade**
-- Muitos-para-Muitos: (N-N)
-- Um-para-Um: (1-1)
-- Um-para-Muitos: (1-N)
+**Exemplo de Stack:**  
+**LAMP Stack:** Linux + Apache + MySQL + PHP.
 
+---
 
-**Chave Estrangeira**
+## Client Side vs Server Side
 
-Adicionando uma chave estrangeira na tabela:
+- **Client Side:** Processamento ocorre no navegador do cliente (ex: JavaScript manipulando o DOM).
+- **Server Side:** Processamento ocorre no servidor antes de enviar a resposta (ex: PHP gerando HTML dinâmico).
 
-Adicione uma nova coluna:
-ALTER TABLE gafanhotos
-ADD COLUMN cursopreferido INT;  -- Lembrar de especificar o tipo da variável
+---
 
-Uso da chave estrangeira:
+## HTTP Seguro (HTTPS)
 
-ALTER TABLE gafanhotos
-ADD FOREIGN KEY (cursopreferido)
-REFERENCES cursos (idcurso);
+O **HTTPS** é a versão segura do HTTP, utilizando TLS/SSL para criptografar a comunicação entre cliente e servidor. Isso garante:
+- **Confidencialidade:** Dados criptografados.
+- **Integridade:** Proteção contra alterações durante a transmissão.
+- **Autenticação:** Confirma que o servidor é legítimo.
 
-A integridade referencial impede alterações que afetem a estrutura de dados, como apagar um curso que esteja referenciado por alunos.
-
-Para listar os alunos, nome do curso e ano:
-
-SELECT gafanhotos.nome, cursos.nome, cursos.ano
-FROM gafanhotos INNER JOIN cursos
-ON cursos.idcurso = gafanhotos.cursopreferido
-ORDER BY gafanhotos.nome;
-
-
-**Uso de apelidos com AS:**
-SELECT g.nome, c.nome, c.ano
-FROM gafanhotos AS g INNER JOIN cursos AS c
-ON c.idcurso = g.cursopreferido
-ORDER BY g.nome;
-g -> gafanhotos
-c -> cursos
-
-**Tipos de Join**
-- Inner Join: Considera apenas as ligações (aquilo que está no centro).
-- Left Outer Join: Considera apenas a tabela à esquerda (gafanhotos).
-- Right Outer Join: Considera apenas a tabela à direita (cursos).
-
-Criação de uma Tabela de Muitos-para-Muitos
-
-CREATE TABLE gafanhoto_assiste_curso (
-id INT NOT NULL AUTO_INCREMENT,
-data DATE,
-idgafanhoto INT,
-idcurso INT,
-PRIMARY KEY (id),
-FOREIGN KEY (idgafanhoto) REFERENCES gafanhotos(id),
-FOREIGN KEY (idcurso) REFERENCES cursos(idcurso)
-) DEFAULT CHARSET=utf8;
-
+**Exemplo:**  
+Ao acessar um site bancário, o cadeado na barra de endereço indica o uso de HTTPS.
 
 
