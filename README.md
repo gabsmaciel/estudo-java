@@ -341,4 +341,86 @@ O **HTTPS** é a versão segura do HTTP, utilizando TLS/SSL para criptografar a 
 **Exemplo:**  
 Ao acessar um site bancário, o cadeado na barra de endereço indica o uso de HTTPS.
 
+# Spring Boot - Primeiros Exercícios
 
+## Uso do Spring Boot com Start.spring.io
+
+No desenvolvimento com **Spring Boot**, utilizamos o site [start.spring.io](https://start.spring.io) para configurar rapidamente o nosso projeto. No meu exercício, optei por usar duas ferramentas principais:
+
+- **Spring Web**: Responsável por criar aplicações web e fornecer recursos para construir APIs REST.
+- **Spring Boot DevTools**: Facilita o desenvolvimento, oferecendo recursos como reinicialização automática e debuggers.
+
+## Maven e Gerenciamento de Dependências
+
+O **Maven** é o sistema de gerenciamento de dependências utilizado no projeto. Ele permite que o Spring Boot gerencie automaticamente as bibliotecas necessárias para o projeto.
+
+### Pom.xml
+O arquivo `pom.xml` contém informações essenciais sobre o projeto, como o nome, versão e dependências.
+
+- **Dependências**: Dentro do `pom.xml`, estão definidas as bibliotecas necessárias para o funcionamento do projeto, geralmente arquivos `.jar`.
+- **Plugins**: Plugins que ajudam a realizar tarefas específicas, como compilar e testar o código.
+
+### Gerenciador de Dependências
+O Maven verifica, na nuvem, se existem repositórios que contêm as dependências necessárias para o projeto.
+
+### Ciclo de Vida do Maven
+O Maven segue um ciclo de vida para o processo de *build* da aplicação, que inclui as fases:
+
+1. **Compilação**: Preparação do código.
+2. **Teste**: Execução de testes automatizados.
+3. **Instalação**: Preparação para a implantação.
+
+## Primeiro Exercício com WebService
+
+O primeiro exercício consiste em criar um **WebService** básico em Spring Boot utilizando o `@RestController`.
+
+### Exemplo de Código
+
+```java
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PrimeiroController {
+
+    @GetMapping(path = {"/ola", "/saudacao"})
+    public String ola() {
+        return "Olá Spring Boot";
+    }
+}
+```
+
+No código acima, criamos um serviço simples que retorna uma saudação ao acessar as rotas `/ola` e `/saudacao` com o método **GET**.
+
+### Testando com Método GET e POST
+
+Para testar os métodos **GET** e **POST**, podemos fazer um comentário no código para usar o **@PostMapping** e verificar se a requisição POST funciona corretamente.
+
+```java
+/* 
+@PostMapping(path = "/saudacao")
+public String saudacao() {
+    return "Olá Spring Boot (usando POST)";
+}
+*/
+```
+
+## Web Service Retornando Objetos
+
+Criei um novo pacote chamado **models**, onde coloquei a classe `Cliente`. Os parâmetros de um cliente foram passados e, ao acessar o serviço, consegui visualizar os dados em formato **JSON** através de uma extensão do Google Chrome.
+
+### O que é JSON?
+**JSON** (JavaScript Object Notation) é um formato leve de troca de dados, utilizado para representar objetos estruturados em texto legível. É amplamente utilizado em APIs Web, como no caso de nossa resposta.
+
+## Revisão dos Métodos HTTP
+
+A comunicação entre o navegador (browser) e o Spring Boot ocorre via requisição e resposta. Abaixo, uma explicação dos principais métodos HTTP utilizados:
+
+- **GET**: Obter dados do servidor.
+- **POST**: Enviar dados ao servidor.
+- **PUT**: Atualizar dados no servidor (alteração total).
+- **PATCH**: Atualizar parcialmente os dados no servidor.
+- **DELETE**: Excluir dados do servidor.
+- **OPTIONS**: Verificar os métodos HTTP suportados por um recurso.
+- **TRACE**: Testar a requisição entre o cliente e o servidor.
+- **HEAD**: Similar ao **GET**, mas apenas os cabeçalhos da resposta, sem o corpo.
