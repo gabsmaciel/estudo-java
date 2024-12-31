@@ -424,3 +424,61 @@ A comunicação entre o navegador (browser) e o Spring Boot ocorre via requisiç
 - **OPTIONS**: Verificar os métodos HTTP suportados por um recurso.
 - **TRACE**: Testar a requisição entre o cliente e o servidor.
 - **HEAD**: Similar ao **GET**, mas apenas os cabeçalhos da resposta, sem o corpo.
+  Ah, entendi! Você quer garantir que o texto esteja organizado e no formato ideal para ser incluído no GitHub. Para isso, ajustarei a formatação de acordo com o padrão geralmente utilizado no GitHub, com linguagem clara, consistente e adequada para documentação de projetos. Aqui está a versão revisada e formatada:
+
+---
+
+# Desafio de Web Service: Calculadora
+
+Este projeto foi desenvolvido como solução para um desafio de Web Service utilizando **Spring Boot** e segue o padrão arquitetural **MVC** (Model-View-Controller). A implementação ficou diferente da apresentada pelo professor, mas os resultados foram os mesmos. Minha solução foi organizada de forma modular, separando as responsabilidades em camadas distintas.
+
+## Estrutura do Projeto
+
+### Model
+Criei uma classe chamada `Calculadora` na pasta `models`. Essa classe contém os atributos e métodos responsáveis pelas operações matemáticas, como soma e subtração.
+
+### Controller
+Na pasta `controllers`, desenvolvi a classe `CalculadoraController`, que expõe os endpoints para realizar as operações matemáticas. A comunicação entre o Controller e o Model é feita de forma simples, instanciando a classe `Calculadora` dentro de cada método do Controller.
+
+### Código da Classe Controller
+Abaixo está o código da classe `CalculadoraController`:
+
+```java
+package com.example.exercicios_sb.controllers;
+
+import com.example.exercicios_sb.models.Calculadora;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/calculadora")
+public class CalculadoraController {
+
+    @GetMapping("/somar/{a}/{b}")
+    public double somar(@PathVariable double a, @PathVariable double b) {
+        Calculadora calculadora = new Calculadora();
+        return calculadora.somar(a, b);
+    }
+
+    @GetMapping("/subtrair")
+    public double subtrair(@RequestParam double a, @RequestParam double b) {
+        Calculadora calculadora = new Calculadora();
+        return calculadora.subtrair(a, b);
+    }
+}
+```
+
+### Observação
+Na solução apresentada pelo professor, toda a lógica foi implementada diretamente dentro da classe `CalculadoraController`. Minha abordagem separa a lógica de negócio na classe `Calculadora`, localizada na camada de **Model**, promovendo uma melhor organização e aderência ao padrão MVC.
+
+---
+
+## Sobre o Padrão MVC
+
+O padrão **MVC** organiza a aplicação em três camadas principais:
+
+1. **Model:** É o coração da aplicação, responsável pelas regras de negócio, entidades e camada de acesso aos dados.
+2. **View:** Responsável por renderizar as respostas ao usuário. Em aplicações web, trabalha com tecnologias como HTML, CSS, JavaScript e motores de template.
+3. **Controller:** Faz o intermédio entre as camadas View e Model, gerenciando as requisições do cliente e encaminhando os dados para a camada correta.
+
+No contexto deste projeto, o fluxo funciona da seguinte forma: uma requisição do navegador chega ao servidor de aplicação (Tomcat, no caso do Spring Boot), que a encaminha para o **Front Controller** (representado pelo `DispatcherServlet`). 
+O `DispatcherServlet` detecta o Controller correto para tratar a requisição, com base nas anotações configuradas, e direciona a execução para o método correspondente.
