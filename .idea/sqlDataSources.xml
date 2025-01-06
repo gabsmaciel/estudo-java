@@ -3,6 +3,9 @@
   <component name="DdlMappings">
     <mapping uuid="ecca1125-58e9-4260-bec5-811aa074220e" name="DDL data source Mapping">
       <data-sources db="4a9338d4-3f6c-443c-b5dc-5bce7326617b" ddl="6da22241-4385-44fb-b393-a8faa93a0f78" />
+      <scope>
+        <node kind="schema" qname="curso_java" />
+      </scope>
     </mapping>
   </component>
   <component name="SqlDataSourceStorage">
