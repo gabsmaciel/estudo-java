@@ -482,3 +482,85 @@ O padrão **MVC** organiza a aplicação em três camadas principais:
 
 No contexto deste projeto, o fluxo funciona da seguinte forma: uma requisição do navegador chega ao servidor de aplicação (Tomcat, no caso do Spring Boot), que a encaminha para o **Front Controller** (representado pelo `DispatcherServlet`). 
 O `DispatcherServlet` detecta o Controller correto para tratar a requisição, com base nas anotações configuradas, e direciona a execução para o método correspondente.
+Segue o texto revisado, organizado para o GitHub e com as anotações mais utilizadas pelo Spring no final:
+
+---
+
+# Injeção de Dependência
+
+A injeção de dependência é um conceito que permite a um terceiro agente (como o framework Spring) criar instâncias de classes e injetá-las automaticamente dentro de outras classes que dependem delas. Isso facilita a gestão de dependências, promove a reutilização de código e aumenta a testabilidade da aplicação.
+
+No Spring, a anotação `@Autowired` é usada para realizar a injeção de dependências. Por meio dela, o framework identifica e injeta automaticamente as dependências necessárias.
+
+---
+
+## Desafio Proposto
+
+### Objetivo:
+Adicionar dois novos atributos à classe `Produto`:
+1. **Preço** (`preco`) — do tipo `double`.
+2. **Desconto** (`desconto`) — do tipo `double`, com valores entre `0.05` (5%) e `0.0025` (0.25%).
+
+Além disso, implementar a funcionalidade de calcular o preço do produto após aplicar o desconto.
+
+### Passos Realizados:
+
+1. **Novos Atributos:**
+   Foram adicionados os atributos `preco` e `desconto` à classe `Produto`:
+   ```java
+   private double preco;
+   private double desconto;
+   ```
+
+2. **Método para Aplicar Desconto:**
+   Criado o método `aplicarDesconto`, que calcula o valor final do produto com base em uma porcentagem de desconto:
+   ```java
+   public double aplicarDesconto(double porcentagemDesconto) {
+       double desconto = (preco * porcentagemDesconto) / 100;
+       return preco - desconto;
+   }
+   ```
+
+3. **Getters e Setters:**
+   Foram implementados os métodos de acesso e modificação (getters e setters) para os novos atributos. Isso permite manipular os valores de forma segura.
+
+4. **Inserção de Produtos via Postman:**
+   Utilizando o método `POST` na API, foi possível adicionar produtos com os atributos `nome`, `preco` e `desconto` diretamente pelo Postman.
+
+### Simplificação do ProdutoController:
+O código do `ProdutoController` foi ajustado para manter a simplicidade e a organização, utilizando boas práticas de injeção de dependência e controle de requisições.
+
+---
+
+## Anotações do Spring Mais Utilizadas
+
+### Anotações de Controladores:
+- **`@RestController`**: Indica que a classe é um controlador que retorna respostas no formato JSON ou XML.
+- **`@RequestMapping`**: Define o mapeamento da URL base para os endpoints da classe.
+- **`@GetMapping` / `@PostMapping` / `@PutMapping` / `@DeleteMapping`**: Especificam os métodos HTTP para os endpoints.
+
+### Anotações para Injeção de Dependência:
+- **`@Autowired`**: Realiza a injeção automática de dependências.
+- **`@Qualifier`**: Utilizada quando há mais de um bean do mesmo tipo, para especificar qual deve ser injetado.
+- **`@Component`**, **`@Service`**, **`@Repository`**: Marcam classes como beans gerenciados pelo Spring.
+
+### Anotações JPA (Mapeamento ORM):
+- **`@Entity`**: Indica que a classe é uma entidade JPA.
+- **`@Id`**: Define o atributo como a chave primária.
+- **`@GeneratedValue`**: Configura a estratégia de geração automática do valor da chave primária.
+- **`@Column`**: Personaliza o mapeamento de uma coluna no banco de dados.
+- **`@Table`**: Define informações adicionais sobre a tabela no banco de dados.
+
+### Validações:
+- **`@NotNull`**: Valida que o campo não seja nulo.
+- **`@Min` / `@Max`**: Define valores mínimos e máximos permitidos.
+- **`@Size`**: Restringe o tamanho de strings ou coleções.
+- **`@Pattern`**: Valida o formato de strings com expressões regulares.
+
+### Anotações Auxiliares:
+- **`@ResponseBody`**: Indica que o valor retornado por um método deve ser serializado diretamente no corpo da resposta HTTP.
+- **`@RequestBody`**: Mapeia o corpo de uma requisição para um objeto Java.
+- **`@PathVariable`**: Extrai valores de variáveis da URL.
+- **`@RequestParam`**: Captura parâmetros passados na URL.
+
+---

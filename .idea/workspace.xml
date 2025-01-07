@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68754bb7-9cf0-40eb-8814-9deff1c74149" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4a9338d4-3f6c-443c-b5dc-5bce7326617b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4a9338d4-3f6c-443c-b5dc-5bce7326617b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqlDataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercicios-sb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-sb/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercicios-sb/src/main/java/com/example/exercicios_sb/controllers/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-sb/src/main/java/com/example/exercicios_sb/controllers/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercicios-sb/src/main/java/com/example/exercicios_sb/models/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-sb/src/main/java/com/example/exercicios_sb/models/entities/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercicios-sb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-sb/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercicios-sb/src/main/java/com/example/exercicios_sb/controllers/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-sb/src/main/java/com/example/exercicios_sb/controllers/ProdutoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercicios-sb/src/main/java/com/example/exercicios_sb/models/entities/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-sb/src/main/java/com/example/exercicios_sb/models/entities/Produto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +162,7 @@
       <workItem from="1735335650903" duration="1171000" />
       <workItem from="1735378707949" duration="28929000" />
       <workItem from="1735847779131" duration="1564000" />
-      <workItem from="1736187363646" duration="9542000" />
+      <workItem from="1736187363646" duration="15283000" />
     </task>
     <servers />
   </component>
