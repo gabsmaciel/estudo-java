@@ -564,3 +564,92 @@ O código do `ProdutoController` foi ajustado para manter a simplicidade e a org
 - **`@RequestParam`**: Captura parâmetros passados na URL.
 
 ---
+
+# Consultando e Alterando Produtos na API
+
+## Consultando Todos os Produtos
+
+O método abaixo permite visualizar todos os produtos cadastrados na base de dados:
+
+```java
+public Iterable<Produto> obterProdutos() {
+    return produtoRepository.findAll();
+}
+```
+
+Utilizando o Postman, foi feito um `GET` na URL correspondente, retornando todos os produtos registrados no formato de um array de objetos em JSON.
+
+---
+
+## Consultando um Produto pelo ID
+
+Para buscar um produto específico pelo seu identificador único (ID), foi implementado o seguinte método:
+
+```java
+@GetMapping(path = "/{id}")
+public Optional<Produto> obterProdutoPorId(@PathVariable int id) {
+    return produtoRepository.findById(id);
+}
+```
+
+No Postman, ao realizar um `GET` com o ID na URL, é possível visualizar o produto correspondente no formato JSON.
+
+---
+
+## Alterando um Produto
+
+O código abaixo permite alterar um produto existente:
+
+```java
+@PutMapping
+public Produto alterarProduto(@Valid Produto produto) {
+    produtoRepository.save(produto);
+    return produto;
+}
+```
+
+### Observações:
+- Foi utilizada a anotação `@PutMapping` para mapear a requisição do tipo `PUT`, que é destinada a atualizar um objeto completo.
+- A anotação `@Valid` foi aplicada para validar os dados enviados antes de salvar no repositório.
+- No Postman, foi possível enviar uma requisição `PUT` para atualizar os dados do produto, como nome e valores, corrigindo ou redefinindo as informações.
+
+### Diferença entre `PUT` e `PATCH`:
+- **`PUT`**: Atualiza o objeto inteiro.
+- **`PATCH`**: Permite alterar apenas propriedades específicas do objeto.
+
+---
+
+## Utilizando POST/PUT para Alterações
+
+Uma alternativa para realizar alterações é permitir que um mesmo endpoint aceite tanto requisições `POST` quanto `PUT`. Isso foi configurado com a anotação:
+
+```java
+@RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
+```
+
+No Postman, é possível utilizar essa abordagem para criar ou alterar registros, dependendo do método utilizado na requisição.
+
+---
+
+## Buscando Produtos pelo Nome
+
+Para buscar produtos contendo um trecho específico no nome, foi criada a seguinte interface no repositório:
+
+```java
+Iterable<Produto> findByNomeContaining(String parteNome);
+```
+
+E o método correspondente no controlador:
+
+```java
+@GetMapping(path = "/nome/{parteNome}")
+public Iterable<Produto> obterProdutoPorNome(@PathVariable String parteNome) {
+    return produtoRepository.findByNomeContaining(parteNome);
+}
+```
+
+### Funcionalidade:
+- Com esse método, ao realizar um `GET` com uma parte do nome como parâmetro na URL, a API retorna todos os produtos cujo nome contenha o trecho informado.
+- No Postman, é possível testar essa funcionalidade passando uma string parcial no lugar de `{parteNome}`.
+
+---
